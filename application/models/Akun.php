@@ -17,6 +17,7 @@ class Akun extends CI_Model {
         $this->db->select("kode, nama");
         $this->db->from('simkeu.akun');
         $this->db->where('kode_up IS NULL');
+        $this->db->order_by('kode ASC');
         $query = $this->db->get();
         return $query->result();
     }

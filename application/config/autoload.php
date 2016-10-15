@@ -58,7 +58,9 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('session', 'database', 'mpdf/mpdf');
+
+//, 'database', 'mpdf/mpdf'
+$autoload['libraries'] = array('session');
 
 /*
 | -------------------------------------------------------------------

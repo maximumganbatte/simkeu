@@ -61,7 +61,7 @@ class Manajemen_akun extends CI_Controller {
 
     public function dataakun_ct() {
         $i = 1;
-        $data = "";
+        $data = array();
         $dataup = $this->Akun->getAkun_up();
         $data[0]['id'] = 0;
         $data[0]['text'] = "Tidak ada";
@@ -82,7 +82,7 @@ class Manajemen_akun extends CI_Controller {
 
     public function dataakun_tg() {
         $i = 0;
-        $data = "";
+        $data = array();
         $dataup = $this->Akun->getAkun_up();
         foreach ($dataup as $val) {
             $data[$i]['id'] = $val->kode;
@@ -102,7 +102,7 @@ class Manajemen_akun extends CI_Controller {
 
     public function dataakun_mct() {
         $i = 0;
-        $data = "";
+        $data = array();
         $dataup = $this->Akun->getAkun_up();
 
         foreach ($dataup as $val) {
@@ -121,7 +121,7 @@ class Manajemen_akun extends CI_Controller {
 
     private function dataakun_mct_dl($kode_up) {
         $i = 0;
-        $data = "";
+        $data = array();
         $datadl = $this->Akun->getAkun_by_up($kode_up);
         foreach ($datadl as $val) {
             $data[$i]['id'] = $val->kode;
@@ -140,7 +140,7 @@ class Manajemen_akun extends CI_Controller {
 
     private function dataakun_ct_dl($kode_up) {
         $i = 0;
-        $data = "";
+        $data = array();
         $datadl = $this->Akun->getAkun_by_up($kode_up);
         foreach ($datadl as $val) {
             $data[$i]['id'] = $val->kode;
@@ -159,7 +159,7 @@ class Manajemen_akun extends CI_Controller {
 
     private function dataakun_tg_dl($kode_up) {
         $i = 0;
-        $data = "";
+        $data = array();
         $datadl = $this->Akun->getAkun_by_up($kode_up);
         foreach ($datadl as $val) {
             $data[$i]['id'] = $val->kode;

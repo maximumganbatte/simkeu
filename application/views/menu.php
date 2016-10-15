@@ -5,8 +5,8 @@
         <ul class="nav side-menu">
             <li class='ma'><a><i class="fa fa-align-left"></i> Manejemen Akun <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li class='ta'><a href="<?= base_url('manejemen_akun/view') ?>">Tambah Akun</a></li>
-                    <li class='ao'><a href="<?= base_url('manejemen_akun/auto') ?>">Akun Otomatis</a></li>
+                    <li class='ta'><a href="<?= base_url('manajemen_akun/view') ?>">Tambah Akun</a></li>
+                    <li class='ao'><a href="<?= base_url('manajemen_akun/auto') ?>">Akun Otomatis</a></li>
                 </ul>
             </li>                
             

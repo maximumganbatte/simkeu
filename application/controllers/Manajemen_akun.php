@@ -38,7 +38,7 @@ class Manajemen_akun extends CI_Controller {
 
     public function auto() {
 //        echo $this->Auto_trx->tambahTrx_auto("tes");
-        echo $this->Auto_trx->getUUID();
+//        echo $this->Auto_trx->getUUID();
         
         $nama_transaksi = $this->input->post('nama_transaksi', TRUE);
         $nama_debet = $this->input->post('nama_debet', TRUE);
@@ -49,7 +49,7 @@ class Manajemen_akun extends CI_Controller {
 
         if ($nama_transaksi && $nama_debet && $kode_akun_debet && $nama_kredit && $kode_akun_kredit && $aksi) {
             if($aksi === 'tambah'){
-                
+                $this->Auto_trx->getUUID();
             }
         } else {
             $data['view'] = 'manajemen_akun/akun_otomatis';

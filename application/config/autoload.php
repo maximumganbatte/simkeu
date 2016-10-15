@@ -60,7 +60,7 @@ $autoload['packages'] = array();
 */
 
 //, 'database', 'mpdf/mpdf'
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('database');
 
 /*
 | -------------------------------------------------------------------

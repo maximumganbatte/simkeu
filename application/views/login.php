@@ -28,7 +28,7 @@
             <div class="login_wrapper">
                 <div class="animate form login_form" style="border: 1px solid #cccccc; padding: 20px;background-color: white;">
                     <section class="login_content">
-                        <img width="120" src="<?= base_url() ?>assets/images/logo.png" />
+                        <!--<img width="120" src="<?= base_url() ?>assets/images/logo.png" />-->
                         <form>
                             <h1>Halaman Login</h1>
                             <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">

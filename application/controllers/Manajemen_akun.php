@@ -49,7 +49,7 @@ class Manajemen_akun extends CI_Controller {
 
         if ($nama_transaksi && $nama_debet && $kode_akun_debet && $nama_kredit && $kode_akun_kredit && $aksi) {
             if($aksi === 'tambah'){
-                $this->Auto_trx->getUUID();
+                $uuid = $this->Auto_trx->getUUID();
             }
         } else {
             $data['view'] = 'manajemen_akun/akun_otomatis';

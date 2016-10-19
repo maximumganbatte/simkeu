@@ -24,5 +24,25 @@ class Auto_trx extends CI_Model {
 
         $this->db->insert('simkeu.trx_auto', $data);
     }
+    
+    public function tambahTrx_auto_jenis($id, $id_trx_auto, $kode_jenis, $nama) {
+        $data = array(
+            'id' => $id,
+            'id_trx_auto' => $id_trx_auto,
+            'kode_jenis' => $kode_jenis,
+            'nama' => $nama
+        );
+
+        $this->db->insert('simkeu.trx_auto_jenis', $data);
+    }
+    
+    public function tambahAkun_trx_auto_jenis($kode_akun, $id_trx_auto_jenis) {
+        $data = array(
+            'kode_akun' => $kode_akun,
+            'id_trx_auto_jenis' => $id_trx_auto_jenis            
+        );
+
+        $this->db->insert('simkeu.akun_trx_auto_jenis', $data);
+    }
 
 }

@@ -49,7 +49,22 @@ class Manajemen_akun extends CI_Controller {
 
         if ($nama_transaksi && $nama_debet && $kode_akun_debet && $nama_kredit && $kode_akun_kredit && $aksi) {
             if($aksi === 'tambah'){
-                $uuid = $this->Auto_trx->getUUID();
+                $id_trx_auto = $this->Auto_trx->getUUID();
+                $this->Auto_trx->tambahTrx_auto($id_trx_auto, $nama_transaksi);
+                
+                $id_trx_auto_jenis_d = $this->Auto_trx->getUUID();
+                $this->Auto_trx->tambahTrx_auto_jenis($id_trx_auto_jenis_d, $id_trx_auto, "D", $nama_debet);
+                $kode_akun_debets = explode(',', $kode_akun_debet);
+                for($i = 0; $i < count($kode_akun_debets); $i++){
+                    $this->Auto_trx->tambahAkun_trx_auto_jenis($kode_akun_debets[$i], $id_trx_auto_jenis_d);
+                }
+                
+                $id_trx_auto_jenis_k = $this->Auto_trx->getUUID();
+                $this->Auto_trx->tambahTrx_auto_jenis($id_trx_auto_jenis_k, $id_trx_auto, "K", $nama_kredit);
+                $kode_akun_kredits = explode(',', $kode_akun_kredit);
+                for($i = 0; $i < count($kode_akun_kredits); $i++){
+                    $this->Auto_trx->tambahAkun_trx_auto_jenis($kode_akun_kredits[$i], $id_trx_auto_jenis_k);
+                }
             }
         } else {
             $data['view'] = 'manajemen_akun/akun_otomatis';

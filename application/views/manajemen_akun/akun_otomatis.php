@@ -142,7 +142,7 @@
             if (isEmpty(nama_transaksi) || isEmpty(nama_debet) || isEmpty(nama_kredit) || isEmpty(kode_akun_debet) || isEmpty(kode_akun_kredit)) {
                 notifikasi("<center>SEMUA FIELD HARUS DIISI!</center>", "error", 1000);
             } else {
-                $.post('view',
+                $.post('auto',
                         {
                             nama_transaksi: nama_transaksi,
                             nama_debet: nama_debet,

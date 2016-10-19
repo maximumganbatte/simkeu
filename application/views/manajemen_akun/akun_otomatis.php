@@ -136,9 +136,6 @@
             var nama_kredit = $('#nama-kredit').val();
             var kode_akun_kredit = String($('#kode-akun-kredit').combotree('getValues'));
             
-            alert(kode_akun_debet);
-            alert(kode_akun_kredit);
-
             if (isEmpty(nama_transaksi) || isEmpty(nama_debet) || isEmpty(nama_kredit) || isEmpty(kode_akun_debet) || isEmpty(kode_akun_kredit)) {
                 notifikasi("<center>SEMUA FIELD HARUS DIISI!</center>", "error", 1000);
             } else {

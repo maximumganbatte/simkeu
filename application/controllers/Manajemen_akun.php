@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Manajemen_akun extends CI_Controller {
 
     public function __construct() {
-        parent::__construct();
+        parent::__construct(); 
         $this->load->model('Akun');
         $this->load->model('Auto_trx');
         date_default_timezone_set('Asia/Jakarta');

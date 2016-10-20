@@ -68,6 +68,7 @@ class Manajemen_akun extends CI_Controller {
             }
         } else {
             $data['trx_auto'] = $this->Auto_trx->getTrx_auto();
+            $data['trx_auto_jenis'] = $this->Auto_trx->getTrx_auto_jenis();
             $data['view'] = 'manajemen_akun/akun_otomatis';
             $this->load->view('layout', $data);
         }

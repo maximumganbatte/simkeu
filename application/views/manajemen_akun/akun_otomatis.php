@@ -79,8 +79,8 @@
                         <?php foreach ($trx_auto as $val) { ?>
                             <tr>
                                 <td><?= $val->nama ?></td>
-                                <td></td>
-                                <td></td>
+                                <td><?= $trx_auto_jenis[$val->id]['D']['nama']?></td>
+                                <td><?= $trx_auto_jenis[$val->id]['K']['nama']?></td>
                                 <td></td>
                             </tr>
                         <?php } ?>

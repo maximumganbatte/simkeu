@@ -23,6 +23,18 @@ class Auto_trx extends CI_Model {
         return $query->result();
     }
     
+    public function getTrx_auto_jenis() {
+        $data = array();
+        $this->db->select("id, id_trx_auto, kode_jenis, nama");
+        $this->db->from('simkeu.trx_auto_jenis');
+        $query = $this->db->get();
+        foreach($query->result() as $val){
+            $data[$val->id_trx_auto][$val->kode_jenis]['id_trx_auto_jenis'] = $val->id;
+            $data[$val->id_trx_auto][$val->kode_jenis]['nama'] = $val->nama;
+        }
+        return $data;
+    }
+    
     public function tambahTrx_auto($id, $nama) {
         $data = array(
             'id' => $id,

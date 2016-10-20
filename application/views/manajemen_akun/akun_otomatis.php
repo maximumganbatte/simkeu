@@ -70,7 +70,7 @@
                     <thead>
                         <tr>
                             <th>Nama</th>
-                            <th>Debet</th>
+                            <th>Debet <input class="kode-akun-debet-list" class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" style="width: 99%"></th>
                             <th>Kredit</th>
                             <th>Aksi</th>
                         </tr>

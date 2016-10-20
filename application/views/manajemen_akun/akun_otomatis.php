@@ -79,8 +79,8 @@
                         <?php foreach ($trx_auto as $val) { ?>
                             <tr>
                                 <td><?= $val->nama ?></td>
-                                <td><?= $trx_auto_jenis[$val->id]['D']['nama'] ?> <input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" style="width: 99%"></td>
-                                <td><?= $trx_auto_jenis[$val->id]['K']['nama']?></td>
+                                <td><?= $trx_auto_jenis[$val->id]['D']['nama'] ?> <input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'"></td>
+                                <td><?= $trx_auto_jenis[$val->id]['K']['nama']?> <input class="easyui-combotree kode-akun-kredit-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'"></td>
                                 <td></td>
                             </tr>
                         <?php } ?>

@@ -78,7 +78,7 @@
                     <tbody>
                         <?php foreach ($trx_auto as $val) { ?>
                             <tr>
-                                <td><?= $val->id ?></td>
+                                <td><?= $val->nama ?></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>

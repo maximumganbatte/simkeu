@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="col-md-6">
         <div class="x_panel">
             <div class="x_title">
@@ -76,12 +76,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        <?php foreach ($trx_auto as $val) { ?>
+                            <tr>
+                                <td><?= $val->id ?></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
@@ -167,7 +169,7 @@
             var kode_akun_debet = String($('#kode-akun-debet').combotree('getValues'));
             var nama_kredit = $('#nama-kredit').val();
             var kode_akun_kredit = String($('#kode-akun-kredit').combotree('getValues'));
-            
+
             if (isEmpty(nama_transaksi) || isEmpty(nama_debet) || isEmpty(nama_kredit) || isEmpty(kode_akun_debet) || isEmpty(kode_akun_kredit)) {
                 notifikasi("<center>SEMUA FIELD HARUS DIISI!</center>", "error", 1000);
             } else {

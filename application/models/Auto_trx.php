@@ -16,6 +16,13 @@ class Auto_trx extends CI_Model {
         return $query->row()->uuid;
     } 
 
+    public function getTrx_auto() {
+        $this->db->select("id, nama");
+        $this->db->from('simkeu.trx_auto');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    
     public function tambahTrx_auto($id, $nama) {
         $data = array(
             'id' => $id,

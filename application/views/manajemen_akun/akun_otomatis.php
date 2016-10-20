@@ -55,6 +55,30 @@
             </div>
         </div>
     </div>
+    
+    <div class="col-md-6">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Data Akun Otomatis<small></small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li class="pull-right"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <table id="table-akun" class="easyui-treegrid" style="width: 99%">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Debet</th>
+                            <th>Kredit</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 
 

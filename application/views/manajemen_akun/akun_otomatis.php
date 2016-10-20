@@ -41,7 +41,7 @@
                     <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12"></label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                            <input id="kode-akun-kredit" class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" style="width: 99%">
+                            <input id="kode-akun-kredit"  class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" style="width: 99%">
                         </div>
                     </div>
                     <div class="ln_solid"></div>
@@ -70,7 +70,7 @@
                     <thead>
                         <tr>
                             <th>Nama</th>
-                            <th>Debet <input class="kode-akun-debet-list" class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" style="width: 99%"></th>
+                            <th>Debet</th>
                             <th>Kredit</th>
                             <th>Aksi</th>
                         </tr>
@@ -79,7 +79,7 @@
                         <?php foreach ($trx_auto as $val) { ?>
                             <tr>
                                 <td><?= $val->nama ?></td>
-                                <td><?= $trx_auto_jenis[$val->id]['D']['nama'] ?> <input class="kode-akun-debet-list" class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" style="width: 99%"></td>
+                                <td><?= $trx_auto_jenis[$val->id]['D']['nama'] ?> <input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" style="width: 99%"></td>
                                 <td><?= $trx_auto_jenis[$val->id]['K']['nama']?></td>
                                 <td></td>
                             </tr>

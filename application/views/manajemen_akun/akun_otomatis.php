@@ -66,7 +66,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
-                <table id="table-akun" class="easyui-treegrid" style="width: 99%">
+                <table id="table-akun" class ="table table-bordered" style="width: 99%">
                     <thead>
                         <tr>
                             <th>Nama</th>

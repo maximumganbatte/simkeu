@@ -168,7 +168,7 @@
         
         $(".kode-akun-debet-list").combotree({
             onCheck: function (node, checked) {
-                alert($(this).parent().parent().parent().attr('class') + " - " + node.id + " - " + checked);
+                alert($(this).parent().parent().parent().parent().attr('class') + " - " + node.id + " - " + checked);
             }
         });
 

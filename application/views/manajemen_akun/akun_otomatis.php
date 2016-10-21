@@ -81,7 +81,10 @@
                                 <td><?= $val->nama ?></td>
                                 <td id="<?= $trx_auto_jenis[$val->id]['D']['id_trx_auto_jenis'] ?>" class="td-id"><?= $trx_auto_jenis[$val->id]['D']['nama'] ?><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>" editable="true"></td>
                                 <td id="<?= $trx_auto_jenis[$val->id]['K']['id_trx_auto_jenis'] ?>" class="td-id" ><?= $trx_auto_jenis[$val->id]['K']['nama'] ?><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>" editable="true"></td>
-                                <td></td>
+                                <td>
+                                    <button type="submit" class="btn btn-round btn-warning btn-xs"><i class="fa fa-pencil"></i></button> 
+                                    <button type="submit" class="btn btn-round btn-danger btn-xs"><i class="fa fa-close"></i></button>
+                                </td>
                             </tr>
                         <?php } ?>
                     </tbody>

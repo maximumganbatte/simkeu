@@ -10,7 +10,7 @@
     
     .link {
         font-style: italic;
-        margin: 5px;
+        margin: 3px;
     }
 </style>
 
@@ -47,6 +47,7 @@
                             <th>Kode Akun</th>
                             <th>Debet</th>
                             <th>Kredit</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

@@ -9,16 +9,18 @@
                     <li><a href="<?= base_url('manajemen_akun/auto') ?>">Akun Otomatis</a></li>
                 </ul>
             </li>                
-            
+
             <li><a><i class="fa fa-file"></i> Jurnal <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="<?= base_url('pengeluaran_kas/view') ?>">Pengeluaran Kas</a></li>
-                    <li><a href="<?= base_url('pengeluaran_kas/auto') ?>">Tambah Otomatis</a></li>
-                    <li><a href="<?= base_url('pengeluaran_kas/manual') ?>">Tambah Manual</a></li>
+                    <ul class="nav child_menu">
+                        <li><a href="<?= base_url('pengeluaran_kas/auto') ?>">Tambah Otomatis</a></li>
+                        <li><a href="<?= base_url('pengeluaran_kas/manual') ?>">Tambah Manual</a></li>
+                    </ul>
                 </ul>
             </li>                
-            
-            
+
+
             <li class='satu'><a><i class="fa fa-hand-o-up"></i> Satu <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li class='coba'><a href="<?= base_url('satu/coba') ?>">Coba</a></li>

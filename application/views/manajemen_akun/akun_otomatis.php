@@ -168,12 +168,21 @@
         });
 
         $(document).on('mouseover', '.td-id', function () {
-           id_trx_auto_jenis = $(this).attr('id'); 
+            id_trx_auto_jenis = $(this).attr('id');
         });
-        
+
         $(".kode-akun-list").combotree({
             onCheck: function (node, checked) {
-                alert(id_trx_auto_jenis + " - " + node.id + " - " + checked);
+                var kode_akun = node.id;
+                var aksi = checked ? "tambah" : "hapus";
+                $.post('auto',
+                        {
+                            id_trx_auto_jenis: id_trx_auto_jenis,
+                            kode_akun: kode_akun,
+                            aksi: aksi
+                        },
+                function (data, status) {});
+//                alert(id_trx_auto_jenis + " - " + node.id + " - " + checked);
             }
         });
 

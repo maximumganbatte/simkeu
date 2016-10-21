@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Manajemen_akun extends CI_Controller {
 
     public function __construct() {
-        parent::__construct(); 
+        parent::__construct();
         $this->load->model('Akun');
         $this->load->model('Auto_trx');
         date_default_timezone_set('Asia/Jakarta');
@@ -39,7 +39,10 @@ class Manajemen_akun extends CI_Controller {
     public function auto() {
 //        print_r($this->Auto_trx->getTrx_auto());
 //        echo $this->Auto_trx->getUUID();
-        
+
+        $id_trx_auto_jenis = $this->input->post('id_trx_auto_jenis', TRUE);
+        $kode_akun = $this->input->post('kode_akun', TRUE);
+
         $nama_transaksi = $this->input->post('nama_transaksi', TRUE);
         $nama_debet = $this->input->post('nama_debet', TRUE);
         $kode_akun_kredit = $this->input->post('kode_akun_kredit', TRUE);
@@ -47,24 +50,32 @@ class Manajemen_akun extends CI_Controller {
         $kode_akun_debet = $this->input->post('kode_akun_debet', TRUE);
         $aksi = $this->input->post('aksi', TRUE);
 
+
+
         if ($nama_transaksi && $nama_debet && $kode_akun_debet && $nama_kredit && $kode_akun_kredit && $aksi) {
-            if($aksi === 'tambah'){
+            if ($aksi === 'tambah') {
                 $id_trx_auto = $this->Auto_trx->getUUID();
                 $this->Auto_trx->tambahTrx_auto($id_trx_auto, $nama_transaksi);
-                
+
                 $id_trx_auto_jenis_d = $this->Auto_trx->getUUID();
                 $this->Auto_trx->tambahTrx_auto_jenis($id_trx_auto_jenis_d, $id_trx_auto, "D", $nama_debet);
                 $kode_akun_debets = explode(',', $kode_akun_debet);
-                for($i = 0; $i < count($kode_akun_debets); $i++){
+                for ($i = 0; $i < count($kode_akun_debets); $i++) {
                     $this->Auto_trx->tambahAkun_trx_auto_jenis($kode_akun_debets[$i], $id_trx_auto_jenis_d);
                 }
-                
+
                 $id_trx_auto_jenis_k = $this->Auto_trx->getUUID();
                 $this->Auto_trx->tambahTrx_auto_jenis($id_trx_auto_jenis_k, $id_trx_auto, "K", $nama_kredit);
                 $kode_akun_kredits = explode(',', $kode_akun_kredit);
-                for($i = 0; $i < count($kode_akun_kredits); $i++){
+                for ($i = 0; $i < count($kode_akun_kredits); $i++) {
                     $this->Auto_trx->tambahAkun_trx_auto_jenis($kode_akun_kredits[$i], $id_trx_auto_jenis_k);
                 }
+            }
+        } else if ($id_trx_auto_jenis && $kode_akun && $aksi) {
+            if ($aksi === 'tambah') {
+                $this->Auto_trx->tambahAkun_trx_auto_jenis($kode_akun, $id_trx_auto_jenis);
+            } else if ($aksi === 'hapus') {
+                $this->Auto_trx->hapusAkun_trx_auto_jenis($kode_akun, $id_trx_auto_jenis);
             }
         } else {
             $data['trx_auto'] = $this->Auto_trx->getTrx_auto();

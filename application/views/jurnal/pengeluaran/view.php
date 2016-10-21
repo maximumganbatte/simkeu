@@ -20,6 +20,7 @@
                     </div>
                 </div>
                 
+                <div class="pull-right">Export :<a href="">PDF</a> <a href="">XLS</a></div>
                 <table id="table-akun" class ="table table-bordered">
                     <thead>
                         <tr>
@@ -34,24 +35,21 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Oktober 2016</td>
-                            <td>10</td>
+                            <td rowspan="2">Oktober 2016</td>
+                            <td rowspan="2">10</td>
                             <td>Kas</td>
                             <td></td>
                             <td>11010000</td>
                             <td>2.200.000</td>
                             <td></td>
-                            <td></td>
+                            <td rowspan="2"> v x</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
                             <td>Pendapatan Non Terikat : UKT Prodi</td>
                             <td></td>
                             <td>41010000</td>
                             <td></td>
                             <td>2.200.000</td>
-                            <td></td>
                         </tr>
                     </tbody>
                 </table>

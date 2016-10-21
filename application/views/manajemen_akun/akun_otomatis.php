@@ -80,7 +80,7 @@
                             <tr>
                                 <td><?= $val->nama ?></td>
                                 <td id="<?= $trx_auto_jenis[$val->id]['D']['id_trx_auto_jenis'] ?>" class="td-debet"><?= $trx_auto_jenis[$val->id]['D']['nama'] ?><br/><input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>" editable="true"></td>
-                                <td><?= $trx_auto_jenis[$val->id]['K']['nama'] ?><br/><input class="easyui-combotree kode-akun-kredit-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>" editable="true"></td>
+                                <td id="<?= $trx_auto_jenis[$val->id]['K']['id_trx_auto_jenis'] ?>" class="td-kredit" ><?= $trx_auto_jenis[$val->id]['K']['nama'] ?><br/><input class="easyui-combotree kode-akun-kredit-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>" editable="true"></td>
                                 <td></td>
                             </tr>
                         <?php } ?>
@@ -171,6 +171,10 @@
 //        });
 
         $(document).on('mouseover', '.td-debet', function () {
+           alert($(this).attr('id')); 
+        });
+        
+        $(document).on('mouseover', '.td-kredit', function () {
            alert($(this).attr('id')); 
         });
 

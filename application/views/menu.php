@@ -13,6 +13,7 @@
             <li><a><i class="fa fa-file"></i> Jurnal <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="<?= base_url('pengeluaran_kas/view') ?>">Pengeluaran Kas</a></li>
+                    <li><a><i class="fa fa-file"></i> Jurnal <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="<?= base_url('pengeluaran_kas/auto') ?>">Tambah Otomatis</a></li>
                         <li><a href="<?= base_url('pengeluaran_kas/manual') ?>">Tambah Manual</a></li>

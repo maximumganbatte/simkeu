@@ -77,10 +77,10 @@
                     </thead>
                     <tbody>
                         <?php foreach ($trx_auto as $val) { ?>
-                            <tr>
-                                <td><?= $val->nama ?></td>
-                                <td id="<?= $trx_auto_jenis[$val->id]['D']['id_trx_auto_jenis'] ?>" class="td-id"><?= $trx_auto_jenis[$val->id]['D']['nama'] ?><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>" editable="true"></td>
-                                <td id="<?= $trx_auto_jenis[$val->id]['K']['id_trx_auto_jenis'] ?>" class="td-id" ><?= $trx_auto_jenis[$val->id]['K']['nama'] ?><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>" editable="true"></td>
+                            <tr id="<?= $val->id ?>">
+                                <td class="nama"><?= $val->nama ?></td>
+                                <td id="<?= $trx_auto_jenis[$val->id]['D']['id_trx_auto_jenis'] ?>" class="td-id"><span class="nama-debet"><?= $trx_auto_jenis[$val->id]['D']['nama'] ?></span><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>" editable="true"></td>
+                                <td id="<?= $trx_auto_jenis[$val->id]['K']['id_trx_auto_jenis'] ?>" class="td-id" ><span class="nama-kredit"><?= $trx_auto_jenis[$val->id]['K']['nama'] ?></span><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>" editable="true"></td>
                                 <td>
                                     <button type="submit" class="btn btn-round btn-warning btn-xs"><i class="fa fa-pencil"></i></button> 
                                     <button type="submit" class="btn btn-round btn-danger btn-xs"><i class="fa fa-close"></i></button>
@@ -90,6 +90,19 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-danger pull-right" id="yes-button">YA</button>
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">TIDAK</button>
+            </div>
+
         </div>
     </div>
 </div>
@@ -184,9 +197,18 @@
                             kode_akun: kode_akun,
                             aksi: aksi
                         },
-                function (data, status) {});
+                function (data, status) {
+                });
 //                alert(id_trx_auto_jenis + " - " + node.id + " - " + checked);
             }
+        });
+
+        $('.btn-warning').click(function () {
+            var id_trx_auto = $(this).parent().parent().attr('id');
+            alert(id_trx_auto)
+//            $(".bs-example-modal-sm .modal-body").text("");
+//            $(".bs-example-modal-sm .modal-body").append("<input type='text' id='nama-akun-edit' class='form-control' value='" + row.text + "' />");
+//            $(".bs-example-modal-sm").modal('show');
         });
 
         $("#simpan-akun-otomatis").click(function () {

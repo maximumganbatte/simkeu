@@ -148,6 +148,9 @@
                 e.preventDefault();
             }
         });
+        
+        
+        $('.kode-akun-debet-list').combotree('setValues', '21000000,11010000')
 
         $(".input-text16").on('input', function () {
             var v = $(this).val();

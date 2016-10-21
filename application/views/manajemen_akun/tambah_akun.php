@@ -227,7 +227,7 @@
             if (aksi === 'ubah' && isEmpty(nama_akun)) {
                 notifikasi("<center>NAMA AKUN HARUS DIISI!</center>", "error", 1000);
             } else {
-                $.post('view',
+                $.post('auto',
                         {
                             kode_akun: kode_akun_temp,
                             nama_akun: nama_akun,

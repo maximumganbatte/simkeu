@@ -168,6 +168,7 @@
         
         $(".kode-akun-debet-list").combotree({
             onCheck: function (node, checked) {
+                alert($(this).text());
                 alert(node.id + " - " + checked);
             }
         });

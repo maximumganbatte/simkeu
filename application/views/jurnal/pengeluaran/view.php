@@ -17,11 +17,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(function () {
-        $('.satu').attr('class', 'satu active');
-        $('.satu .coba').attr('class', 'coba current-page');
-        $('.satu .child_menu').attr('style', 'display:block;');
-    });
-</script>

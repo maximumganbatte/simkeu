@@ -1,7 +1,11 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <style>
-    .money-align{
+    .right-align{
         text-align: right;
+    }
+    
+    .center-align{
+        text-align: center;
     }
 </style>
 
@@ -46,24 +50,24 @@
                             <td rowspan="2">10</td>
                             <td>Kas</td>
                             <td></td>
-                            <td class="money-align">11010000</td>
-                            <td class="money-align">2.200.000</td>
+                            <td>11010000</td>
+                            <td class="right-align">2.200.000</td>
                             <td></td>
                             <td rowspan="2"> v x</td>
                         </tr>
                         <tr>
                             <td>Pendapatan Non Terikat : UKT Prodi</td>
                             <td></td>
-                            <td class="money-align">41010000</td>
+                            <td>41010000</td>
                             <td></td>
-                            <td class="money-align">2.200.000</td>
+                            <td class="right-align">2.200.000</td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th colspan="5">Jumlah</th>
-                            <td class="money-align">2.200.000</th>
-                            <td class="money-align">2.200.000</th>
+                            <th class="center-align" colspan="5">Jumlah</th>
+                            <td class="right-align">2.200.000</th>
+                            <td class="right-align">2.200.000</th>
                         </tr>
                     </tfoot>
                 </table>

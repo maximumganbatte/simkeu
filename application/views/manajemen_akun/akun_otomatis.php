@@ -79,8 +79,8 @@
                         <?php foreach ($trx_auto as $val) { ?>
                             <tr>
                                 <td><?= $val->nama ?></td>
-                                <td><?= $trx_auto_jenis[$val->id]['D']['nama'] ?> <input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="21000000,11010000"  style="width: 70%"></td>
-                                <td><?= $trx_auto_jenis[$val->id]['K']['nama']?> <input class="easyui-combotree kode-akun-kredit-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" style="width: 70%"></td>
+                                <td><?= $trx_auto_jenis[$val->id]['D']['nama'] ?> <input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>"  style="width: 70%"></td>
+                                <td><?= $trx_auto_jenis[$val->id]['K']['nama'] ?> <input class="easyui-combotree kode-akun-kredit-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" style="width: 70%"></td>
                                 <td></td>
                             </tr>
                         <?php } ?>
@@ -148,8 +148,8 @@
                 e.preventDefault();
             }
         });
-        
-        
+
+
 //        $('.kode-akun-debet-list').combotree('setValues', '21000000,11010000');
 
         $(".input-text16").on('input', function () {

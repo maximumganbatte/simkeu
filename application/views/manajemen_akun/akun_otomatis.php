@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
                 <h2>Data Akun Otomatis<small></small></h2>

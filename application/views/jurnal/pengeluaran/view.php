@@ -36,8 +36,8 @@
                 </div>
 
                 <br/><br/><br/>
-                <div class="pull-right">Export :<a class="link" href=""><u>PDF</u></a> <a class="link" href=""><u>XLS</u></a></div>
-                <div>Tambah Data : <a class="link" href=""><u>Otomatis</u></a> <a class="link" href=""><u>Manual</u></a> </div>
+                <div class="pull-right"><strong>Export :</strong><a class="link" href=""><u>PDF</u></a> <a class="link" href=""><u>XLS</u></a></div>
+                <div><strong>Tambah Data : </strong><a class="link" href="auto"><u>Otomatis</u></a> <a class="link" href="manual"><u>Manual</u></a> </div>
                 <table id="table-akun" class ="table table-bordered">
                     <thead>
                         <tr>

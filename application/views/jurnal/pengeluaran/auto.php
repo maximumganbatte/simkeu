@@ -1,11 +1,17 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
+<style>
+    .back-link{
+        font-size: 8pt;
+    }
+</style>
+
 <div class="row">
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
                 <h2>
-                    <button type="submit" class="btn btn-round btn-dark btn-sm"><i class="fa fa-chevron-circle-left"></i> PENGELUARAN KAS</button>
+                    <button type="submit" class="btn btn-round btn-dark btn-sm"><i class="fa fa-chevron-left"></i> <span class="back-link">PENGELUARAN KAS</span></button>
                     Tambah Data Otomatis
                 </h2>
                 <div class="clearfix"></div>

@@ -165,10 +165,6 @@
                 $(this).val(v);
             }
         });
-//
-//        $(".kode-akun-debet-list").click(function () {
-//            alert($(this).parent().attr('class'));
-//        });
 
         $(document).on('mouseover', '.td-debet', function () {
            alert($(this).attr('id')); 

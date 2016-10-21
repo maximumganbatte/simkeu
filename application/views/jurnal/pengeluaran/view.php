@@ -30,8 +30,9 @@
                     </div>
                 </div>
                 
-                <br/><br/>
+                <br/><br/><br/>
                 <div class="pull-right">Export :<a href="">PDF</a> <a href="">XLS</a></div>
+                <div>Tambah Data : <a href="">Otomatis</a> <a href="">Manual</a> </div>
                 <table id="table-akun" class ="table table-bordered">
                     <thead>
                         <tr>

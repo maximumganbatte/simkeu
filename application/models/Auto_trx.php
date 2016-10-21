@@ -14,7 +14,7 @@ class Auto_trx extends CI_Model {
         $this->db->select("uuid_in(md5(random()::text || now()::text)::cstring) as uuid");
         $query = $this->db->get();
         return $query->row()->uuid;
-    } 
+    }
 
     public function getTrx_auto() {
         $this->db->select("id, nama");
@@ -22,21 +22,21 @@ class Auto_trx extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
-    
+
     public function getTrx_auto_jenis() {
         $data = array();
         $this->db->select("id, id_trx_auto, kode_jenis, nama, kode_akun");
         $this->db->from('simkeu.trx_auto_jenis taj');
         $this->db->from('simkeu.akun_trx_auto_jenis ataj', 'ktaj.id_trx_auto_jenis = taj.id');
         $query = $this->db->get();
-        foreach($query->result() as $val){
+        foreach ($query->result() as $val) {
             $data[$val->id_trx_auto][$val->kode_jenis]['id_trx_auto_jenis'] = $val->id;
             $data[$val->id_trx_auto][$val->kode_jenis]['nama'] = $val->nama;
-            $data[$val->id_trx_auto][$val->kode_jenis]['kode_akun'] = $val->kode_akun;
+            $data[$val->id_trx_auto][$val->kode_jenis]['kode_akun'] .= $val->kode_akun . ",";
         }
         return $data;
     }
-    
+
     public function tambahTrx_auto($id, $nama) {
         $data = array(
             'id' => $id,
@@ -45,7 +45,7 @@ class Auto_trx extends CI_Model {
 
         $this->db->insert('simkeu.trx_auto', $data);
     }
-    
+
     public function tambahTrx_auto_jenis($id, $id_trx_auto, $kode_jenis, $nama) {
         $data = array(
             'id' => $id,
@@ -56,11 +56,11 @@ class Auto_trx extends CI_Model {
 
         $this->db->insert('simkeu.trx_auto_jenis', $data);
     }
-    
+
     public function tambahAkun_trx_auto_jenis($kode_akun, $id_trx_auto_jenis) {
         $data = array(
             'kode_akun' => $kode_akun,
-            'id_trx_auto_jenis' => $id_trx_auto_jenis            
+            'id_trx_auto_jenis' => $id_trx_auto_jenis
         );
 
         $this->db->insert('simkeu.akun_trx_auto_jenis', $data);

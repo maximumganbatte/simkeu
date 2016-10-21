@@ -205,10 +205,13 @@
 
         $('.btn-warning').click(function () {
             var id_trx_auto = $(this).parent().parent().attr('id');
-            alert(id_trx_auto)
-//            $(".bs-example-modal-sm .modal-body").text("");
-//            $(".bs-example-modal-sm .modal-body").append("<input type='text' id='nama-akun-edit' class='form-control' value='" + row.text + "' />");
-//            $(".bs-example-modal-sm").modal('show');
+            $(".bs-example-modal-sm .modal-body").text("");
+            $(".bs-example-modal-sm .modal-body").append(
+                    "<input type='text' id='nama-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama').text() + "' />" +
+                    "<input type='text' id='nama-debet-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama-debet').text() + "' />" +
+                    "<input type='text' id='nama-kredit-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama-kredit').text() + "' />" +
+                    );
+            $(".bs-example-modal-sm").modal('show');
         });
 
         $("#simpan-akun-otomatis").click(function () {

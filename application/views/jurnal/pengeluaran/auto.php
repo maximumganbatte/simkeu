@@ -17,3 +17,12 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    $(function () {
+        $('.pk').attr('class', 'pk active');
+        $('.pk .ju').attr('class', 'ju current-page');
+        $('.pk .child_menu').attr('style', 'display:block;');
+    });
+</script>

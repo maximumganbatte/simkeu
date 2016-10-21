@@ -29,7 +29,7 @@
                     <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12"></label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                            <input id="kode-akun-debet" class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" style="width: 99%">
+                            <input id="kode-akun-debet" class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" style="width: 100%">
                         </div>
                     </div>
                     <div class="form-group">
@@ -41,7 +41,7 @@
                     <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12"></label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                            <input id="kode-akun-kredit"  class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" style="width: 99%">
+                            <input id="kode-akun-kredit"  class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" style="width: 100%">
                         </div>
                     </div>
                     <div class="ln_solid"></div>
@@ -66,7 +66,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
-                <table id="table-akun" class ="table table-bordered" style="width: 100%">
+                <table id="table-akun" class ="table table-bordered">
                     <thead>
                         <tr>
                             <th>Nama</th>

@@ -5,7 +5,7 @@
         <div class="x_panel">
             <div class="x_title">
                 <h2>
-                    <button type="submit" class="btn btn-round btn-dark btn-sm"><i class="fa fa-chevron-left"></i> <small>PENGELUARAN KAS</small><button>
+                    <button type="submit" class="btn btn-round btn-dark btn-sm"><i class="fa fa-chevron-circle-left"></i> PENGELUARAN KAS</button>
                     Tambah Data Otomatis
                 </h2>
                 <div class="clearfix"></div>

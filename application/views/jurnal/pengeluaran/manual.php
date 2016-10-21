@@ -4,7 +4,7 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>Judul 1 <small>deskripsi singkat 1</small></h2>
+                <h2>Tambah Data Manual <small>Pengeluaran Kas</small></h2>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -17,3 +17,11 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(function () {
+        $('.ju').attr('class', 'ju active');
+        $('.ju .pk').attr('class', 'pk current-page');
+        $('.ju .child_menu').attr('style', 'display:block;');
+    });
+</script>

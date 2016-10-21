@@ -18,4 +18,14 @@ class Pengeluaran_kas extends CI_Controller {
         $this->load->view('layout', $data);
     }
 
+    public function auto() {
+        $data['view'] = 'jurnal/pengeluaran/auto';
+        $this->load->view('layout', $data);
+    }
+    
+    public function manual() {
+        $data['view'] = 'jurnal/pengeluaran/manual';
+        $this->load->view('layout', $data);
+    }
+    
 }

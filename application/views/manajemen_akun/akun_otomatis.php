@@ -66,7 +66,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
-                <table id="table-akun" class ="table table-bordered" style="width: 99%">
+                <table id="table-akun" class ="table table-bordered" style="width: 100%">
                     <thead>
                         <tr>
                             <th>Nama</th>
@@ -79,7 +79,7 @@
                         <?php foreach ($trx_auto as $val) { ?>
                             <tr>
                                 <td><?= $val->nama ?></td>
-                                <td><?= $trx_auto_jenis[$val->id]['D']['nama'] ?> <input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'"></td>
+                                <td><?= $trx_auto_jenis[$val->id]['D']['nama'] ?> <input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" style="width: 100%"></td>
                                 <td><?= $trx_auto_jenis[$val->id]['K']['nama']?> <input class="easyui-combotree kode-akun-kredit-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'"></td>
                                 <td></td>
                             </tr>

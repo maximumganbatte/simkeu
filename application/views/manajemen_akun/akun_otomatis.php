@@ -82,8 +82,8 @@
                                 <td id="<?= $trx_auto_jenis[$val->id]['D']['id_trx_auto_jenis'] ?>" class="td-id"><span class="nama-debet"><?= $trx_auto_jenis[$val->id]['D']['nama'] ?></span><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>" editable="true"></td>
                                 <td id="<?= $trx_auto_jenis[$val->id]['K']['id_trx_auto_jenis'] ?>" class="td-id" ><span class="nama-kredit"><?= $trx_auto_jenis[$val->id]['K']['nama'] ?></span><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>" editable="true"></td>
                                 <td>
-                                    <button type="submit" class="btn btn-round btn-warning"><i class="fa fa-pencil"></i></button> 
-                                    <button type="submit" class="btn btn-round btn-danger"><i class="fa fa-close"></i></button>
+                                    <button type="submit" class="btn btn-round btn-warning edit-trx-auto"><i class="fa fa-pencil"></i></button> 
+                                    <button type="submit" class="btn btn-round btn-danger delete-trx-auto"><i class="fa fa-close"></i></button>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -205,7 +205,7 @@
             }
         });
 
-        $('.btn-warning').click(function () {
+        $('.edit-trx-auto').click(function () {
             aksi = "ubah";
             id_trx_auto = $(this).parent().parent().attr('id');
             $(".bs-example-modal-sm .modal-body").text("");
@@ -217,7 +217,7 @@
             $(".bs-example-modal-sm").modal('show');
         });
 
-        $('.btn-danger').click(function () {
+        $('.delete-trx-auto').click(function () {
             aksi = "hapus";
             id_trx_auto = $(this).parent().parent().attr('id');
             $(".bs-example-modal-sm .modal-body").text("");

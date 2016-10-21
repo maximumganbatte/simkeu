@@ -29,7 +29,7 @@
                     <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12"></label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                            <input id="kode-akun-debet" class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" style="width: 100%">
+                            <input id="kode-akun-debet" class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" style="width: 100%" editable="true">
                         </div>
                     </div>
                     <div class="form-group">

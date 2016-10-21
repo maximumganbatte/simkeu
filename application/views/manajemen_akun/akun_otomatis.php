@@ -79,8 +79,8 @@
                         <?php foreach ($trx_auto as $val) { ?>
                             <tr>
                                 <td><?= $val->nama ?></td>
-                                <td id="<?= $trx_auto_jenis[$val->id]['D']['id_trx_auto_jenis'] ?>" class="td-debet"><?= $trx_auto_jenis[$val->id]['D']['nama'] ?><br/><input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>" editable="true"></td>
-                                <td id="<?= $trx_auto_jenis[$val->id]['K']['id_trx_auto_jenis'] ?>" class="td-kredit" ><?= $trx_auto_jenis[$val->id]['K']['nama'] ?><br/><input class="easyui-combotree kode-akun-kredit-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>" editable="true"></td>
+                                <td id="<?= $trx_auto_jenis[$val->id]['D']['id_trx_auto_jenis'] ?>" class="td-id"><?= $trx_auto_jenis[$val->id]['D']['nama'] ?><br/><input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>" editable="true"></td>
+                                <td id="<?= $trx_auto_jenis[$val->id]['K']['id_trx_auto_jenis'] ?>" class="td-id" ><?= $trx_auto_jenis[$val->id]['K']['nama'] ?><br/><input class="easyui-combotree kode-akun-kredit-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>" editable="true"></td>
                                 <td></td>
                             </tr>
                         <?php } ?>
@@ -138,6 +138,7 @@
 
         //-------------------------------
 
+        var id_trx_auto_jenis;
 
         $(".input-text16").keydown(function (e) {
             if ($.inArray(e.keyCode, [46, 8, 13, 32, 9, 37, 39]) !== -1 || ((e.keyCode === 65 || e.keyCode === 67 || e.keyCode === 86) && (e.ctrlKey === true || e.metaKey === true))) {
@@ -166,17 +167,13 @@
             }
         });
 
-        $(document).on('mouseover', '.td-debet', function () {
-           alert($(this).attr('id')); 
+        $(document).on('mouseover', '.td-id', function () {
+           id_trx_auto_jenis = $(this).attr('id'); 
         });
         
-        $(document).on('mouseover', '.td-kredit', function () {
-           alert($(this).attr('id')); 
-        });
-
         $(".kode-akun-debet-list").combotree({
             onCheck: function (node, checked) {
-                alert(" - " + node.id + " - " + checked);
+                alert(id_trx_auto_jenis + " - " + node.id + " - " + checked);
             }
         });
 

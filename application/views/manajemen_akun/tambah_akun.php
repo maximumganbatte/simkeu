@@ -13,20 +13,20 @@
             <div class="x_content">
                 <form class="form-horizontal form-label-left" method="POST" action="">
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Kode
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Kode
                         </label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
                             <input type="text" id="kode-akun" name="kode_akun" class="form-control col-md-7 col-xs-12" maxlength="8" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nama</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama</label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
                             <input type="text" id="nama-akun" name="nama_akun" class="form-control col-md-7 col-xs-12" maxlength="64" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Up</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Up</label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
                             <input id="kode-akun-up" name="kode-akun-up" class="easyui-combotree" data-options="url:'dataakun_ct',method:'get',lines: true" style="width: 99%" editable="true"/>
                         </div>

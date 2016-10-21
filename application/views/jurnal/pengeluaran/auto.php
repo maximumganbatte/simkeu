@@ -2,7 +2,8 @@
 
 <style>
     .back-link{
-        font-size: 8pt;
+        font-size: 7pt;
+        font-weight: bold;
     }
 </style>
 

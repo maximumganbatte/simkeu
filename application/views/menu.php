@@ -10,7 +10,7 @@
                 </ul>
             </li>                
             
-            <li><a><i class="fa fa-align-left"></i> Jurnal <span class="fa fa-file"></span></a>
+            <li><a><i class="fa fa-file"></i> Jurnal <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="<?= base_url('pengeluaran_kas/view') ?>">Pengeluaran Kas</a></li>
                 </ul>

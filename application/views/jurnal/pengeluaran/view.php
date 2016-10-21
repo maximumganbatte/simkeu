@@ -7,6 +7,11 @@
     .center-align{
         text-align: center;
     }
+    
+    .link {
+        font-style: italic;
+        margin: 5px;
+    }
 </style>
 
 
@@ -31,8 +36,8 @@
                 </div>
                 
                 <br/><br/><br/>
-                <div class="pull-right">Export :<a href="">PDF</a> <a href="">XLS</a></div>
-                <div>Tambah Data : <a href="">Otomatis</a> <a href="">Manual</a> </div>
+                <div class="pull-right">Export :<a class="link" href=""><u>PDF</u></a> <a class="link" href=""><u>XLS</u></a></div>
+                <div>Tambah Data : <a class="link" href=""><u>Otomatis</u></a> <a class="link" href=""><u>Manual</u></a> </div>
                 <table id="table-akun" class ="table table-bordered">
                     <thead>
                         <tr>
@@ -42,7 +47,6 @@
                             <th>Kode Akun</th>
                             <th>Debet</th>
                             <th>Kredit</th>
-                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

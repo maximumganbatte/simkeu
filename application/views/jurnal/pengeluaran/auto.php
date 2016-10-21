@@ -11,7 +11,7 @@
         <div class="x_panel">
             <div class="x_title">
                 <h2>
-                    <button type="submit" class="btn btn-round btn-dark btn-sm"><i class="fa fa-chevron-left"></i> <span class="back-link">PENGELUARAN KAS</span></button>
+                    <button type="submit" class="btn btn-round btn-dark btn-sm"><i class="fa fa-chevron-circle-left"></i> <text class="back-link">PENGELUARAN KAS</text></button>
                     Tambah Data Otomatis
                 </h2>
                 <div class="clearfix"></div>

@@ -25,12 +25,14 @@ class Auto_trx extends CI_Model {
     
     public function getTrx_auto_jenis() {
         $data = array();
-        $this->db->select("id, id_trx_auto, kode_jenis, nama");
-        $this->db->from('simkeu.trx_auto_jenis');
+        $this->db->select("id, id_trx_auto, kode_jenis, nama, kode_akun");
+        $this->db->from('simkeu.trx_auto_jenis taj');
+        $this->db->from('simkeu.akun_trx_auto_jenis ataj', 'ktaj.id_trx_auto_jenis = taj.id');
         $query = $this->db->get();
         foreach($query->result() as $val){
             $data[$val->id_trx_auto][$val->kode_jenis]['id_trx_auto_jenis'] = $val->id;
             $data[$val->id_trx_auto][$val->kode_jenis]['nama'] = $val->nama;
+            $data[$val->id_trx_auto][$val->kode_jenis]['kode_akun'] = $val->kode_akun;
         }
         return $data;
     }

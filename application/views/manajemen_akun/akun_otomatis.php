@@ -41,7 +41,7 @@
                     <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12"></label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                            <input id="kode-akun-kredit"  class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" style="width: 100%">
+                            <input id="kode-akun-kredit"  class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" style="width: 100%" editable="true">
                         </div>
                     </div>
                     <div class="ln_solid"></div>
@@ -79,8 +79,8 @@
                         <?php foreach ($trx_auto as $val) { ?>
                             <tr>
                                 <td><?= $val->nama ?></td>
-                                <td><?= $trx_auto_jenis[$val->id]['D']['nama'] ?><br/><input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>"></td>
-                                <td><?= $trx_auto_jenis[$val->id]['K']['nama'] ?><br/><input class="easyui-combotree kode-akun-kredit-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>"></td>
+                                <td><?= $trx_auto_jenis[$val->id]['D']['nama'] ?><br/><input class="easyui-combotree kode-akun-debet-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>" editable="true"></td>
+                                <td><?= $trx_auto_jenis[$val->id]['K']['nama'] ?><br/><input class="easyui-combotree kode-akun-kredit-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>" editable="true"></td>
                                 <td></td>
                             </tr>
                         <?php } ?>

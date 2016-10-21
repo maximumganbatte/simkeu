@@ -28,7 +28,7 @@
                     <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Up</label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                            <input id="kode-akun-up" name="kode-akun-up" class="easyui-combotree" data-options="url:'dataakun_ct',method:'get',lines: true" style="width: 99%" />
+                            <input id="kode-akun-up" name="kode-akun-up" class="easyui-combotree" data-options="url:'dataakun_ct',method:'get',lines: true" style="width: 99%" editable="true"/>
                         </div>
                     </div>
                     <div class="ln_solid"></div>

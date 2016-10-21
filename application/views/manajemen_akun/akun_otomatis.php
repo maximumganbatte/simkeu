@@ -206,10 +206,10 @@
         $('.btn-warning').click(function () {
             var id_trx_auto = $(this).parent().parent().attr('id');
             $(".bs-example-modal-sm .modal-body").text("");
-            $(".bs-example-modal-sm .modal-body").append(""+
-                    "Nama Transaksi : <input type='text' id='nama-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama').text() + "' />" +
-                    "Nama Debet :<input type='text' id='nama-debet-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama-debet').text() + "' />" +
-                    "Nama Kredit :<input type='text' id='nama-kredit-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama-kredit').text() + "' />"+
+            $(".bs-example-modal-sm .modal-body").append("" +
+                    "Nama Transaksi : <input type='text' id='nama-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama').text() + "' /><br/>" +
+                    "Nama Debet :<input type='text' id='nama-debet-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama-debet').text() + "' /><br/>" +
+                    "Nama Kredit :<input type='text' id='nama-kredit-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama-kredit').text() + "' />" +
                     "");
             $(".bs-example-modal-sm").modal('show');
         });

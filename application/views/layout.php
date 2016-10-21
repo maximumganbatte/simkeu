@@ -89,6 +89,8 @@
         <script src="<?= base_url() ?>assets/vendors/fastclick/lib/fastclick.js"></script>
         <!-- NProgress -->
         <script src="<?= base_url() ?>assets/vendors/nprogress/nprogress.js"></script>
+        <!-- Select2 -->
+        <script src="<?= base_url() ?>assets/vendors/select2/dist/js/select2.full.min.js"></script>
         <!-- jQuery custom content scroller -->
         <script src="<?= base_url() ?>assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
         

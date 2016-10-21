@@ -66,10 +66,6 @@
     </div>
 </div>
 
-
-
-<script src="<?= base_url() ?>assets/vendors/select2/dist/js/select2.full.min.js"></script>
-
 <script>
     $(function () {
         $('.ju').attr('class', 'ju active');

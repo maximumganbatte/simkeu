@@ -82,8 +82,8 @@
                                 <td id="<?= $trx_auto_jenis[$val->id]['D']['id_trx_auto_jenis'] ?>" class="td-id"><span class="nama-debet"><?= $trx_auto_jenis[$val->id]['D']['nama'] ?></span><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>" editable="true"></td>
                                 <td id="<?= $trx_auto_jenis[$val->id]['K']['id_trx_auto_jenis'] ?>" class="td-id" ><span class="nama-kredit"><?= $trx_auto_jenis[$val->id]['K']['nama'] ?></span><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>" editable="true"></td>
                                 <td>
-                                    <button type="submit" class="btn btn-round btn-warning btn-xs"><i class="fa fa-pencil"></i></button> 
-                                    <button type="submit" class="btn btn-round btn-danger btn-xs"><i class="fa fa-close"></i></button>
+                                    <button type="submit" class="btn btn-round btn-warning"><i class="fa fa-pencil"></i></button> 
+                                    <button type="submit" class="btn btn-round btn-danger"><i class="fa fa-close"></i></button>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -155,6 +155,7 @@
         //-------------------------------
 
         var id_trx_auto_jenis;
+        var aksi;
 
         $(".input-text16").keydown(function (e) {
             if ($.inArray(e.keyCode, [46, 8, 13, 32, 9, 37, 39]) !== -1 || ((e.keyCode === 65 || e.keyCode === 67 || e.keyCode === 86) && (e.ctrlKey === true || e.metaKey === true))) {
@@ -204,13 +205,21 @@
         });
 
         $('.btn-warning').click(function () {
+            aksi = "ubah";
             var id_trx_auto = $(this).parent().parent().attr('id');
             $(".bs-example-modal-sm .modal-body").text("");
             $(".bs-example-modal-sm .modal-body").append("" +
-                    "Nama Transaksi : <input type='text' id='nama-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama').text() + "' /><br/>" +
-                    "Nama Debet :<input type='text' id='nama-debet-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama-debet').text() + "' /><br/>" +
-                    "Nama Kredit :<input type='text' id='nama-kredit-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama-kredit').text() + "' />" +
+                    "Nama Transaksi <input type='text' id='nama-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama').text() + "' /><br/>" +
+                    "Nama Debet <input type='text' id='nama-debet-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama-debet').text() + "' /><br/>" +
+                    "Nama Kredit <input type='text' id='nama-kredit-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama-kredit').text() + "' />" +
                     "");
+            $(".bs-example-modal-sm").modal('show');
+        });
+
+        $('.btn-danger').click(function () {
+            aksi = "hapus";
+            var id_trx_auto = $(this).parent().parent().attr('id');
+            $(".bs-example-modal-sm .modal-body").text("Hapus transaksi " + $('#' + id_trx_auto + ' .nama').text() + "?");
             $(".bs-example-modal-sm").modal('show');
         });
 

@@ -220,8 +220,6 @@
             $("#nama-akun-edit").select();
         });
 
-
-
         $("#yes-button").click(function () {
             var nama_akun = $("#nama-akun-edit").val();
 

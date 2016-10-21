@@ -172,7 +172,7 @@
 
         $(".kode-akun-debet-list").combotree({
             onClick: function (item) {
-                
+                alert('aa');
             },            
             onCheck: function (node, checked) {
                 alert(" - " + node.id + " - " + checked);

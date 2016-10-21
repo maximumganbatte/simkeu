@@ -170,10 +170,11 @@
 //            alert($(this).parent().attr('class'));
 //        });
 
+        $(document).on('mouseover', '.kode-akun-debet-list', function () {
+           alert('a'); 
+        });
+
         $(".kode-akun-debet-list").combotree({
-            onClick: function (item) {
-                alert($(this).attr('class'));
-            },            
             onCheck: function (node, checked) {
                 alert(" - " + node.id + " - " + checked);
             }

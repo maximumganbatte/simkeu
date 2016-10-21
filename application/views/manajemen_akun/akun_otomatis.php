@@ -165,6 +165,12 @@
                 $(this).val(v);
             }
         });
+        
+        $(".kode-akun-debet-list").combotree({
+            onSelect: function (node) {
+                alert("dd");
+            }
+        });
 
         $("#simpan-akun-otomatis").click(function () {
             var nama_transaksi = $('#nama-transaksi').val();

@@ -9,8 +9,8 @@
             </div>
             <div class="x_content">
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Tanggal</label>
-                    <div class="col-sm-9">
+                    <label class="col-sm-1 control-label">Tanggal</label>
+                    <div class="col-sm-5">
                         <div class="input-group">
                             <input type="text" class="form-control">
                             <span class="input-group-btn">
@@ -19,6 +19,42 @@
                         </div>
                     </div>
                 </div>
+                
+                <table id="table-akun" class ="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Tanggal</th>
+                            <th>Keterangan</th>
+                            <th>No Bukti</th>
+                            <th>Kode Akun</th>
+                            <th>Debet</th>
+                            <th>Kredit</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Oktober 2016</td>
+                            <td>10</td>
+                            <td>Kas</td>
+                            <td></td>
+                            <td>11010000</td>
+                            <td>2.200.000</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Pendapatan Non Terikat : UKT Prodi</td>
+                            <td></td>
+                            <td>41010000</td>
+                            <td></td>
+                            <td>2.200.000</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

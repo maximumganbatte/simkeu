@@ -14,32 +14,32 @@
                 <!--<form class="form-horizontal form-label-left" method="POST" action="">-->
                 <fieldset class="form-horizontal form-label-left">
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nama Transaksi
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Transaksi
                         </label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
                             <input type="text" id="nama-transaksi" class="form-control col-md-7 col-xs-12 input-text16" maxlength="16" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nama Debet</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Debet</label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
                             <input type="text" id="nama-debet" class="form-control col-md-7 col-xs-12 input-text16" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
                             <input id="kode-akun-debet" class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" style="width: 100%" editable="true">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nama Kredit</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Kredit</label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
                             <input type="text" id="nama-kredit" class="form-control col-md-7 col-xs-12 input-text16">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
                             <input id="kode-akun-kredit"  class="easyui-combotree" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" style="width: 100%" editable="true">
                         </div>

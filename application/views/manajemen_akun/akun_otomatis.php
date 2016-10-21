@@ -169,6 +169,9 @@
         $(".kode-akun-debet-list").combotree({
             onSelect: function (node) {
                 alert("dd");
+            },
+            onUnselect: function (node) {
+                alert("ee");
             }
         });
 

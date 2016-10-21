@@ -81,12 +81,12 @@ class Auto_trx extends CI_Model {
         $this->db->insert('simkeu.akun_trx_auto_jenis', $data);
     }
     
-    public function ubahTrx_auto($id_trx_auto, $nama) {
+    public function ubahTrx_auto($id, $nama) {
         $data = array(
             'nama' => $nama
         );
 
-        $this->db->where('id', $id_trx_auto);
+        $this->db->where('id', $id);
         $this->db->update('simkeu.trx_auto', $data);
     }
     
@@ -100,8 +100,8 @@ class Auto_trx extends CI_Model {
         $this->db->update('simkeu.trx_auto_jenis', $data);
     }
     
-    public function hapusTrx_auto($id_trx_auto) {
-        $this->db->where('id_trx_auto', $id_trx_auto);
+    public function hapusTrx_auto($id) {
+        $this->db->where('id', $id);
         $this->db->delete('simkeu.trx_auto');
     }
     

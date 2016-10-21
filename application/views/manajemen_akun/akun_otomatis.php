@@ -233,7 +233,7 @@
             if (aksi === 'ubah' && isEmpty(nama_trx_auto) && isEmpty(nama_debet_trx_auto) && isEmpty(nama_kredit_trx_auto)) {
                 notifikasi("<center>NAMA TRANSAKSI, DEBET, DAN KREDIT HARUS DIISI!</center>", "error", 1000);
             } else {
-                $.post('view',
+                $.post('auto',
                         {
                             id_trx_auto: id_trx_auto,
                             nama_transaksi: nama_trx_auto,

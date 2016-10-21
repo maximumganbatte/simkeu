@@ -1,10 +1,20 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
+<style>
+    .back-link{
+        font-size: 7pt;
+        font-weight: bold;
+    }
+</style>
+
 <div class="row">
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>Tambah Data Manual <small>Pengeluaran Kas</small></h2>
+                <h2>
+                    <a href="view" type="submit" class="btn btn-round btn-dark btn-sm"><i class="fa fa-chevron-circle-left"></i> <text class="back-link">PENGELUARAN KAS</text></a>
+                    Tambah Data Manual
+                </h2>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -17,6 +27,7 @@
         </div>
     </div>
 </div>
+
 
 <script>
     $(function () {

@@ -165,12 +165,15 @@
                 $(this).val(v);
             }
         });
-
-        $(".kode-akun-debet-list").click(function () {
-            alert($(this).parent().attr('class'));
-        });
+//
+//        $(".kode-akun-debet-list").click(function () {
+//            alert($(this).parent().attr('class'));
+//        });
 
         $(".kode-akun-debet-list").combotree({
+            onClick: function (item) {
+                
+            },            
             onCheck: function (node, checked) {
                 alert(" - " + node.id + " - " + checked);
             }

@@ -219,7 +219,8 @@
         $('.btn-danger').click(function () {
             aksi = "hapus";
             var id_trx_auto = $(this).parent().parent().attr('id');
-            $(".bs-example-modal-sm .modal-body").text("Hapus transaksi " + $('#' + id_trx_auto + ' .nama').text() + "?");
+            $(".bs-example-modal-sm .modal-body").text("");
+            $(".bs-example-modal-sm .modal-body").append("Hapus transaksi <strong>" + $('#' + id_trx_auto + ' .nama').text() + "</strong>?");
             $(".bs-example-modal-sm").modal('show');
         });
 

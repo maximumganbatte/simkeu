@@ -40,6 +40,7 @@ class Manajemen_akun extends CI_Controller {
 //        print_r($this->Auto_trx->getTrx_auto());
 //        echo $this->Auto_trx->getUUID();
 
+        $id_trx_auto = $this->input->post('id_trx_auto', TRUE);
         $id_trx_auto_jenis = $this->input->post('id_trx_auto_jenis', TRUE);
         $kode_akun = $this->input->post('kode_akun', TRUE);
 
@@ -52,7 +53,7 @@ class Manajemen_akun extends CI_Controller {
 
 
 
-        if ($nama_transaksi && $nama_debet && $kode_akun_debet && $nama_kredit && $kode_akun_kredit && $aksi) {
+        if ($aksi && (($aksi === 'hapus' && $id_trx_auto) || ($nama_transaksi && $nama_debet && $nama_kredit && ($aksi === 'ubah' && $id_trx_auto) || ($aksi === 'tambah' && $kode_akun_debet && $kode_akun_kredit)))) {
             if ($aksi === 'tambah') {
                 $id_trx_auto = $this->Auto_trx->getUUID();
                 $this->Auto_trx->tambahTrx_auto($id_trx_auto, $nama_transaksi);
@@ -70,6 +71,12 @@ class Manajemen_akun extends CI_Controller {
                 for ($i = 0; $i < count($kode_akun_kredits); $i++) {
                     $this->Auto_trx->tambahAkun_trx_auto_jenis($kode_akun_kredits[$i], $id_trx_auto_jenis_k);
                 }
+            } else if ($aksi === 'ubah') {
+                $this->Auto_trx->ubahTrx_auto($id_trx_auto, $nama_transaksi);
+                $this->Auto_trx->ubahTrx_auto_jenis($id_trx_auto, "D", $nama_debet);
+                $this->Auto_trx->ubahTrx_auto_jenis($id_trx_auto, "K", $nama_kredit);
+            } else if ($aksi === 'hapus') {
+                $this->Auto_trx->hapusTrx_auto($id_trx_auto);
             }
         } else if ($id_trx_auto_jenis && $kode_akun && $aksi) {
             if ($aksi === 'tambah') {

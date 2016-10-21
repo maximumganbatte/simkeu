@@ -154,6 +154,7 @@
 
         //-------------------------------
 
+        var id_trx_auto;
         var id_trx_auto_jenis;
         var aksi;
 
@@ -206,7 +207,7 @@
 
         $('.btn-warning').click(function () {
             aksi = "ubah";
-            var id_trx_auto = $(this).parent().parent().attr('id');
+            id_trx_auto = $(this).parent().parent().attr('id');
             $(".bs-example-modal-sm .modal-body").text("");
             $(".bs-example-modal-sm .modal-body").append("" +
                     "Nama Transaksi <input type='text' id='nama-trx-auto' class='form-control' value='" + $('#' + id_trx_auto + ' .nama').text() + "' /><br/>" +
@@ -218,10 +219,34 @@
 
         $('.btn-danger').click(function () {
             aksi = "hapus";
-            var id_trx_auto = $(this).parent().parent().attr('id');
+            id_trx_auto = $(this).parent().parent().attr('id');
             $(".bs-example-modal-sm .modal-body").text("");
             $(".bs-example-modal-sm .modal-body").append("Hapus transaksi <strong>" + $('#' + id_trx_auto + ' .nama').text() + "</strong>?");
             $(".bs-example-modal-sm").modal('show');
+        });
+        
+        $("#yes-button").click(function () {
+            var nama_trx_auto = $("#nama-trx-auto").val();
+            var nama_debet_trx_auto = $("#nama-debet-trx-auto").val();
+            var nama_kredit_trx_auto = $("#nama-kredit-trx-auto").val();
+
+            if (aksi === 'ubah' && isEmpty(nama_trx_auto) && isEmpty(nama_debet_trx_auto) && isEmpty(nama_kredit_trx_auto)) {
+                notifikasi("<center>NAMA TRANSAKSI, DEBET, DAN KREDIT HARUS DIISI!</center>", "error", 1000);
+            } else {
+                $.post('view',
+                        {
+                            id_trx_auto: id_trx_auto,
+                            nama_transaksi: nama_trx_auto,
+                            nama_debet: nama_debet_trx_auto,
+                            nama_kredit: nama_kredit_trx_auto,
+                            aksi: aksi
+                        },
+                function (data, status) {
+                    if (status === 'success') {
+                        location.reload();
+                    }
+                });
+            }
         });
 
         $("#simpan-akun-otomatis").click(function () {

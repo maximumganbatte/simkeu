@@ -88,13 +88,13 @@
 </div>
 
 
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendors/jquery-easyui/themes/bootstrap/easyui.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendors/jquery-easyui/themes/icon.css">
+<link href="<?= base_url() ?>assets/vendors/jquery-easyui/themes/bootstrap/easyui.css" rel="stylesheet" >
+<link href="<?= base_url() ?>assets/vendors/jquery-easyui/themes/icon.css" rel="stylesheet" >
 <link href="<?= base_url() ?>assets/vendors/pnotify/dist/pnotify.css" rel="stylesheet">
 <link href="<?= base_url() ?>assets/vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
 <link href="<?= base_url() ?>assets/vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
 
-<script type="text/javascript" src="<?= base_url() ?>assets/vendors/jquery-easyui/jquery.easyui.min.js"></script>
+<script src="<?= base_url() ?>assets/vendors/jquery-easyui/jquery.easyui.min.js"></script>
 <script src="<?= base_url() ?>assets/vendors/pnotify/dist/pnotify.js"></script>
 <script src="<?= base_url() ?>assets/vendors/pnotify/dist/pnotify.buttons.js"></script>
 <script src="<?= base_url() ?>assets/vendors/pnotify/dist/pnotify.nonblock.js"></script>

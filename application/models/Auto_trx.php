@@ -86,7 +86,7 @@ class Auto_trx extends CI_Model {
             'nama' => $nama
         );
 
-        $this->db->where('id_trx_auto', $id_trx_auto);
+        $this->db->where('id', $id_trx_auto);
         $this->db->update('simkeu.trx_auto', $data);
     }
     

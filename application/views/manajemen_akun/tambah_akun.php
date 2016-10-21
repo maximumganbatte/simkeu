@@ -210,7 +210,8 @@
                 } else if (field === 'delete') {
                     kode_akun_temp = row.id;
                     aksi = "hapus";
-                    $(".bs-example-modal-sm .modal-body").text("Hapus akun " + row.id + " - " + row.text + "?");
+                    $(".bs-example-modal-sm .modal-body").text("");
+                    $(".bs-example-modal-sm .modal-body").append("Hapus akun <strong>" + row.id + " - " + row.text + "</strong>?");
                     $(".bs-example-modal-sm").modal('show');
                 }
             }

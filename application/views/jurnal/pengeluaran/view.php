@@ -3,11 +3,11 @@
     .right-align{
         text-align: right;
     }
-    
+
     .center-align{
         text-align: center;
     }
-    
+
     .link {
         font-style: italic;
         margin: 3px;
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <br/><br/><br/>
                 <div class="pull-right">Export :<a class="link" href=""><u>PDF</u></a> <a class="link" href=""><u>XLS</u></a></div>
                 <div>Tambah Data : <a class="link" href=""><u>Otomatis</u></a> <a class="link" href=""><u>Manual</u></a> </div>
@@ -59,7 +59,10 @@
                             <td>11010000</td>
                             <td class="right-align">2.200.000</td>
                             <td></td>
-                            <td rowspan="2"> v x</td>
+                            <td rowspan="2">
+                                <button type="submit" class="btn btn-round btn-warning btn-sm edit-pengeluaran-kas"><i class="fa fa-pencil"></i></button> 
+                                <button type="submit" class="btn btn-round btn-danger btn-sm delete-pengeluaran-kas"><i class="fa fa-close"></i></button>
+                            </td>
                         </tr>
                         <tr>
                             <td>Pendapatan Non Terikat : UKT Prodi</td>

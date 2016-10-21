@@ -167,7 +167,7 @@
         });
         
         $(".kode-akun-debet-list").combotree({
-            onCheck: function (node) {
+            onCheck: function (node, checked) {
                 alert("dd");
             }
         });

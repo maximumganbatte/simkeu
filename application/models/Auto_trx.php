@@ -32,7 +32,7 @@ class Auto_trx extends CI_Model {
         foreach ($query->result() as $val) {
             $data[$val->id_trx_auto][$val->kode_jenis]['id_trx_auto_jenis'] = $val->id;
             $data[$val->id_trx_auto][$val->kode_jenis]['nama'] = $val->nama;
-            $data[$val->id_trx_auto][$val->kode_jenis]['kode_akun'] .= $val->kode_akun . ",";
+            @$data[$val->id_trx_auto][$val->kode_jenis]['kode_akun'] .= $val->kode_akun . ",";
         }
         return $data;
     }

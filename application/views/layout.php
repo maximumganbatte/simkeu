@@ -18,7 +18,8 @@
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendors/font-awesome/css/font-awesome.min.css">
         <!-- jQuery custom content scroller -->
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
-
+        <!-- Select2 -->
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendors/select2/dist/css/select2.min.css">
         <!-- Custom Theme Style -->
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/build/css/custom.min.css">
         

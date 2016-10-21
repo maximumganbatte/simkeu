@@ -4,8 +4,8 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2><button type="submit" class="btn btn-round btn-warning btn-sm"><i class="fa fa-chevron-left"></i> kembali</button> 
-                    Tambah Data Otomatis <small>Pengeluaran Kas</small></h2>
+                <button type="submit" class="btn btn-round btn-dark btn-sm"><i class="fa fa-chevron-left"></i> pengeluaran kas</button>
+                <h2>Tambah Data Otomatis</h2>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">

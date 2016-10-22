@@ -174,7 +174,9 @@
             var cls = $(this).parent().parent().attr('class');
             var cls2 = (id_input === 'input-debet') ? ld-- : lk--;
             $("#" + id_input + " ." + cls).remove();
+            alert(cls + " - " + cls2);
             for (var i = cls; i < cls2; i++) {
+                alert(i);
                 alert($("#" + id_input + " ." + (i + 1)).attr('class'));
                 $("#" + id_input + " ." + (i + 1)).attr('class', i);
             }

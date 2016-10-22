@@ -24,12 +24,16 @@ class Akun extends CI_Model {
         return $query->result();
     }
 
-    public function getAkun_group_up() {
+    public function getAkun_group_up($id_trx_auto, $kode_jenis) {
         $i = 0;
         $up_temp = "-";
         $data = array();
         $this->db->select("kode, nama, CASE WHEN kode_up IS NULL THEN '-' ELSE kode_up END as kode_up");
-        $this->db->from('simkeu.akun');
+        $this->db->from('simkeu.akun a');
+        $this->db->join('simkeu.akun_trx_auto_jenis ataj', 'ataj.kode_akun = a.kode');
+        $this->db->join('simkeu.trx_auto_jenis taj', 'taj.id = a.id_trx_auto_jenis');
+        $this->db->where('taj.id_trx_auto', $id_trx_auto);
+        $this->db->where('taj.kode_jenis', $kode_jenis);
         $this->db->order_by('kode_up ASC');
         $query = $this->db->get();
         foreach ($query->result() as $val) {

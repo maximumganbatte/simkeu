@@ -163,7 +163,7 @@
             $(input_clone).find('.select2_group').attr('class', 'select2_group form-control');
             $(input_clone).find('.select2_group').removeAttr('tabindex');
             $(input_clone).find('.select2_group').removeAttr('aria-hidden');
-            $(input_clone).find('input').val("");
+            $(input_clone).find('input[type=text]').val("");
             $("#" + id_input).append(input_clone);
             $("#" + id_input + " ." + cls + " .select2_group").select2();
             $("#" + id_input + " ." + (cls - 1) + " .button-action").text("");

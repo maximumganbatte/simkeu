@@ -5,6 +5,10 @@
         font-size: 7pt;
         font-weight: bold;
     }
+
+    .right-align{
+        text-align: right;
+    }
 </style>
 
 <div class="row">
@@ -22,7 +26,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-3 col-xs-12">Tanggal</label>
                         <div class="col-md-3 col-sm-8 col-xs-12">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control"/>
                         </div>
                     </div>
                     <div class="form-group">
@@ -58,7 +62,7 @@
                     <tbody id="input-debet">
                         <tr class="1">
                             <td>
-                                <select class="select2_group form-control">
+                                <select class="select2_group form-control"/>
                                     <optgroup label="Alaskan/Hawaiian Time Zone">
                                         <option value="AK">Alaska</option>
                                         <option value="HI">Hawaii</option>
@@ -72,17 +76,16 @@
                                 </select>
                             </td>
                             <td>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control"/>
                             </td>
                             <td>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control"/>
                             </td>
                             <td>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control right-align"/>
                             </td>
                             <td class="button-action">
-                                <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button> 
-                                <!--<button type="submit" class="btn btn-round btn-danger btn-sm"><i class="fa fa-close"></i></button>-->
+                                <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button>
                             </td>
                         </tr>
                     </tbody>
@@ -95,7 +98,7 @@
                     <tbody id="input-kredit">
                         <tr class="1">
                             <td>
-                                <select class="select2_group form-control">
+                                <select class="select2_group form-control"/>
                                     <optgroup label="Alaskan/Hawaiian Time Zone">
                                         <option value="AK">Alaska</option>
                                         <option value="HI">Hawaii</option>
@@ -109,17 +112,16 @@
                                 </select>
                             </td>
                             <td>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control"/>
                             </td>
                             <td>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control"/>
                             </td>
                             <td>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control right-align"/>
                             </td>
                             <td class="button-action">
-                                <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button> 
-                                <!--<button type="submit" class="btn btn-round btn-danger btn-sm"><i class="fa fa-close"></i></button>-->
+                                <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button>
                             </td>
                         </tr>
                     </tbody>

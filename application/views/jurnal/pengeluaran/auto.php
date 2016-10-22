@@ -62,7 +62,7 @@
                         <tr class="1">
                             <td>
                                 <select class="select2_group form-control">
-                                    <optgroup label="Alaskan/Hawaiian Time Zone">
+<!--                                    <optgroup label="Alaskan/Hawaiian Time Zone">
                                         <option value="AK">Alaska</option>
                                         <option value="HI">Hawaii</option>
                                     </optgroup>
@@ -71,7 +71,7 @@
                                         <option value="NV">Nevada</option>
                                         <option value="OR">Oregon</option>
                                         <option value="WA">Washington</option>
-                                    </optgroup>
+                                    </optgroup>-->
                                 </select>
                             </td>
                             <td>
@@ -98,7 +98,7 @@
                         <tr class="1">
                             <td>
                                 <select class="select2_group form-control">
-                                    <optgroup label="Alaskan/Hawaiian Time Zone">
+<!--                                    <optgroup label="Alaskan/Hawaiian Time Zone">
                                         <option value="AK">Alaska</option>
                                         <option value="HI">Hawaii</option>
                                     </optgroup>
@@ -107,7 +107,7 @@
                                         <option value="NV">Nevada</option>
                                         <option value="OR">Oregon</option>
                                         <option value="WA">Washington</option>
-                                    </optgroup>
+                                    </optgroup>-->
                                 </select>
                             </td>
                             <td>

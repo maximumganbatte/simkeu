@@ -43,7 +43,7 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Kode Akun</th>
+                            <th style="width: 40%;">Kode Akun</th>
                             <th>Keterangan</th>
                             <th>Nomor Bukti</th>
                             <th>Jumlah</th>
@@ -143,6 +143,6 @@
 
         $(".select2_group").select2();
         
-        $("table .select2-container").attr('style', 'width:200%;');
+        $("table .select2-container").attr('style', 'width:100%;');
     });
 </script>

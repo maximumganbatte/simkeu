@@ -143,6 +143,6 @@
 
         $(".select2_group").select2();
         
-        $("table .select2-container").attr('style', 'width:100%;');
+        $("table .select2-container").attr('style', 'width:200%;');
     });
 </script>

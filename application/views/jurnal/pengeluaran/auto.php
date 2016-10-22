@@ -139,41 +139,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Switch</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <div class="">
-                                <label>
-                                    <input type="checkbox" class="js-switch" checked /> Checked
-                                </label>
-                            </div>
-                            <div class="">
-                                <label>
-                                    <input type="checkbox" class="js-switch" /> Unchecked
-                                </label>
-                            </div>
-                            <div class="">
-                                <label>
-                                    <input type="checkbox" class="js-switch" disabled="disabled" /> Disabled
-                                </label>
-                            </div>
-                            <div class="">
-                                <label>
-                                    <input type="checkbox" class="js-switch" disabled="disabled" checked="checked" /> Disabled Checked
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="ln_solid"></div>
-                    <div class="form-group">
-                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                            <button type="submit" class="btn btn-primary">Cancel</button>
-                            <button type="submit" class="btn btn-success">Submit</button>
-                        </div>
-                    </div>
-
+                  
                 </form>
             </div>
         </div>

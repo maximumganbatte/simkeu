@@ -43,7 +43,7 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th style="width: 30%;">Kode Akun</th>
+                            <th style="width: 25%;">Kode Akun</th>
                             <th>Keterangan</th>
                             <th>Nomor Bukti</th>
                             <th>Jumlah</th>

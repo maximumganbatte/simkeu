@@ -20,14 +20,14 @@
             <div class="x_content">
                 <form class="form-horizontal form-label-left">
                     <div class="form-group">
-                        <label class="control-label col-md-3">Default Input</label>
-                        <div class="col-md-9">
+                        <label class="control-label col-md-2">Default Input</label>
+                        <div class="col-md-2">
                             <input type="text" class="form-control" placeholder="Default Input">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3">Select Custom</label>
-                        <div class="col-md-9">
+                        <label class="control-label col-md-2">Select Custom</label>
+                        <div class="col-md-2">
                             <select class="select2_single form-control" tabindex="-1">
                                 <option></option>
                                 <option value="AK">Alaska</option>

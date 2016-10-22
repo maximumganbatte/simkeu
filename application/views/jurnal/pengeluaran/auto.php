@@ -50,11 +50,11 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="input-debet">
                         <tr>
                             <th colspan="5"><br/>[DEBET] nama</th>
                         </tr>
-                        <tr>
+                        <tr class="1">
                             <td>
                                 <select class="select2_group form-control">
                                     <optgroup label="Alaskan/Hawaiian Time Zone">
@@ -79,15 +79,17 @@
                                 <input type="text" class="form-control">
                             </td>
                             <td>
-                                <button type="submit" class="btn btn-round btn-success btn-sm"><i class="fa fa-plus"></i></button> 
+                                <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button> 
                                 <!--<button type="submit" class="btn btn-round btn-danger btn-sm"><i class="fa fa-close"></i></button>-->
                             </td>
                         </tr>
                         <!------------------------------------------------------------>
+                    </tbody>
+                    <tbody id="input-kredit">
                         <tr>
                             <th colspan="5"><br/><br/>[KREDIT] nama</th>
                         </tr>
-                        <tr>
+                        <tr class="1">
                             <td>
                                 <select class="select2_group form-control">
                                     <optgroup label="Alaskan/Hawaiian Time Zone">
@@ -142,7 +144,11 @@
         });
 
         $(".select2_group").select2();
-        
+
         $("table .select2-container").attr('style', 'width:100%;');
+
+        $(".add-input").click(function () {
+            alert('1');
+        });
     });
 </script>

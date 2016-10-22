@@ -54,7 +54,7 @@ class Auto_trx extends CI_Model {
     }
     
     public function getKode_akun_up_by_id_trx_auto($id_trx_auto, $kode_jenis) {
-        $this->db->select("au.kode, CASE WHEN au.nama IS NULL THEN '-' ELSE au.nama END as nama");
+        $this->db->select("CASE WHEN au.kode IS NULL THEN '-' ELSE au.kode END as kode, CASE WHEN au.nama IS NULL THEN '-' ELSE au.nama END as nama");
         $this->db->from('simkeu.trx_auto ta');
         $this->db->join('simkeu.trx_auto_jenis taj', 'taj.id_trx_auto = ta.id');
         $this->db->join('simkeu.akun_trx_auto_jenis ataj', 'ataj.id_trx_auto_jenis = taj.id');

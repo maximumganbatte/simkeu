@@ -158,7 +158,7 @@
         var id_trx_auto_jenis;
         var aksi;
 
-        $(".textbox.combo").attr('style','width:100%;');
+        $(".textbox").attr('style','width:100%;');
 
         $(".input-text16").keydown(function (e) {
             if ($.inArray(e.keyCode, [46, 8, 13, 32, 9, 37, 39]) !== -1 || ((e.keyCode === 65 || e.keyCode === 67 || e.keyCode === 86) && (e.ctrlKey === true || e.metaKey === true))) {

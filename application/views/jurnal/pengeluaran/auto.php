@@ -80,7 +80,7 @@
                             <td>
                                 <input type="text" class="form-control">
                             </td>
-                            <td>
+                            <td class="button-action">
                                 <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button> 
                                 <!--<button type="submit" class="btn btn-round btn-danger btn-sm"><i class="fa fa-close"></i></button>-->
                             </td>
@@ -117,8 +117,8 @@
                             <td>
                                 <input type="text" class="form-control">
                             </td>
-                            <td>
-                                <button type="submit" class="btn btn-round btn-success btn-sm"><i class="fa fa-plus"></i></button> 
+                            <td class="button-action">
+                                <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button> 
                                 <!--<button type="submit" class="btn btn-round btn-danger btn-sm"><i class="fa fa-close"></i></button>-->
                             </td>
                         </tr>
@@ -153,7 +153,7 @@
 
         $("table .select2-container").attr('style', 'width:100%;');
 
-        $(".add-input").click(function () {
+        $(document).on('click', '.add-input', function () {
             var id_input = $(this).parent().parent().parent().attr('id');
             var cls = (id_input === 'input-debet') ? ++ld : ++lk;
             var input_clone = $(this).parent().parent().clone();
@@ -163,8 +163,9 @@
             $(input_clone).find('.select2_group').removeAttr('tabindex');
             $(input_clone).find('.select2_group').removeAttr('aria-hidden');
             $("#" + id_input).append(input_clone);
-
             $("#" + id_input + " ." + cls + " .select2_group").select2();
+            $(this).parent().text("")
+            $(this).parent().append("<button type='submit' class='btn btn-round btn-danger btn-sm remove-input'><i class='fa fa-close'></i></button>")
         });
     });
 </script>

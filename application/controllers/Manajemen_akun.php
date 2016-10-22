@@ -106,7 +106,7 @@ class Manajemen_akun extends CI_Controller {
             $data[$i]['text'] = $val->kode . ' - ' . $val->nama;
             $datadl = $this->dataakun_ct_dl($val->kode);
             if (count($datadl) > 0) {
-                $data[$i]['state'] = "closed";
+//                $data[$i]['state'] = "closed";
                 $data[$i]['children'] = $datadl;
             }
             $i++;
@@ -183,7 +183,7 @@ class Manajemen_akun extends CI_Controller {
             $data[$i]['delete'] = "x";
             $datadl = $this->dataakun_ct_dl($val->kode);
             if (count($datadl) > 0) {
-                $data[$i]['state'] = "closed";
+//                $data[$i]['state'] = "closed";
                 $data[$i]['children'] = $datadl;
             }
             $i++;

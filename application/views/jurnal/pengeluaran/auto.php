@@ -164,7 +164,7 @@
             $(input_clone).find('.select2_group').removeAttr('tabindex');
             $(input_clone).find('.select2_group').removeAttr('aria-hidden');
             $("#" + id_input).append(input_clone);
-            $("#" + id_input + " ." + cls + " .select2_group").select2();
+            $("#" + id_input + " ." + cls + " .select2_group").select2(); 
             $("#" + id_input + " ." + (cls - 1) + " .button-action").text("");
             $("#" + id_input + " ." + (cls - 1) + " .button-action").append("<button type='submit' class='btn btn-round btn-danger btn-sm remove-input'><i class='fa fa-close'></i></button>");
         });

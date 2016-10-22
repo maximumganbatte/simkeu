@@ -28,7 +28,7 @@ class Akun extends CI_Model {
         $i = 0;
         $up_temp = "";
         $data = array();
-        $this->db->select("kode, nama, kode_up");
+        $this->db->select("kode, nama, CASE WHEN kode_up IS NULL THEN '-' ELSE kode_up END as kode_up");
         $this->db->from('simkeu.akun');
         $this->db->order_by('kode ASC');
         $query = $this->db->get();

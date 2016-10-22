@@ -32,7 +32,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-3 col-xs-12">Transaksi</label>
                         <div class="col-md-3 col-sm-8 col-xs-12">
-                            <select class="select2_single form-control" tabindex="-1">
+                            <select class="select2_single form-control">
                                 <option></option>
                                 <?php foreach ($trx_auto as $val) { ?>
                                     <option value="<?= $val->id ?>"><?= $val->nama ?></option>
@@ -61,32 +61,32 @@
                     <tbody id="input-debet">
                         <tr class="1">
                             <td>
-                                <select class="select2_group form-control"/>
-                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                        <option value="AK">Alaska</option>
-                        <option value="HI">Hawaii</option>
-                    </optgroup>
-                    <optgroup label="Pacific Time Zone">
-                        <option value="CA">California</option>
-                        <option value="NV">Nevada</option>
-                        <option value="OR">Oregon</option>
-                        <option value="WA">Washington</option>
-                    </optgroup>
-                    </select>
-                    </td>
-                    <td>
-                        <input type="text" class="form-control"/>
-                    </td>
-                    <td>
-                        <input type="text" class="form-control"/>
-                    </td>
-                    <td>
-                        <input type="text" class="form-control right-align money"/>
-                    </td>
-                    <td class="button-action">
-                        <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button>
-                    </td>
-                    </tr>
+                                <select class="select2_group form-control">
+                                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                                        <option value="AK">Alaska</option>
+                                        <option value="HI">Hawaii</option>
+                                    </optgroup>
+                                    <optgroup label="Pacific Time Zone">
+                                        <option value="CA">California</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="WA">Washington</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control"/>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control"/>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control right-align money"/>
+                            </td>
+                            <td class="button-action">
+                                <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button>
+                            </td>
+                        </tr>
                     </tbody>
                     <!------------------------------------------------------------>
                     <tbody>
@@ -97,32 +97,32 @@
                     <tbody id="input-kredit">
                         <tr class="1">
                             <td>
-                                <select class="select2_group form-control"/>
-                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                        <option value="AK">Alaska</option>
-                        <option value="HI">Hawaii</option>
-                    </optgroup>
-                    <optgroup label="Pacific Time Zone">
-                        <option value="CA">California</option>
-                        <option value="NV">Nevada</option>
-                        <option value="OR">Oregon</option>
-                        <option value="WA">Washington</option>
-                    </optgroup>
-                    </select>
-                    </td>
-                    <td>
-                        <input type="text" class="form-control"/>
-                    </td>
-                    <td>
-                        <input type="text" class="form-control"/>
-                    </td>
-                    <td>
-                        <input type="text" class="form-control right-align money"/>
-                    </td>
-                    <td class="button-action">
-                        <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button>
-                    </td>
-                    </tr>
+                                <select class="select2_group form-control">
+                                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                                        <option value="AK">Alaska</option>
+                                        <option value="HI">Hawaii</option>
+                                    </optgroup>
+                                    <optgroup label="Pacific Time Zone">
+                                        <option value="CA">California</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="WA">Washington</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control"/>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control"/>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control right-align money"/>
+                            </td>
+                            <td class="button-action">
+                                <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button>
+                            </td>
+                        </tr>
                     </tbody>
                     <!---------------------------------------------------------------------->
                     <tbody>

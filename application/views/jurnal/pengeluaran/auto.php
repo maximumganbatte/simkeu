@@ -157,6 +157,9 @@
             var id_input = $(this).parent().parent().parent().attr('id');
             var input_clone = $(this).parent().parent().clone();
             $(input_clone).find('.select2').remove();
+            $(input_clone).find('.select2_group').attr('class', 'select2_group form-control');
+            $(input_clone).find('.select2_group').removeAttr('tabindex');
+            $(input_clone).find('.select2_group').removeAttr('aria-hidden');
             $("#" + id_input).append(input_clone);
         });
     });

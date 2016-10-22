@@ -163,6 +163,7 @@
             $(input_clone).find('.select2_group').attr('class', 'select2_group form-control');
             $(input_clone).find('.select2_group').removeAttr('tabindex');
             $(input_clone).find('.select2_group').removeAttr('aria-hidden');
+            $(input_clone).find('input').val("");
             $("#" + id_input).append(input_clone);
             $("#" + id_input + " ." + cls + " .select2_group").select2();
             $("#" + id_input + " ." + (cls - 1) + " .button-action").text("");
@@ -174,7 +175,6 @@
             var cls = $(this).parent().parent().attr('class');
             var cls2 = (id_input === 'input-debet') ? ld-- : lk--;
             $("#" + id_input + " ." + cls).remove();
-            alert(cls + " - " + cls2);
             for (var i = cls; i < cls2; i++) {
                 $("#" + id_input + " ." + (parseInt(i) + 1)).attr('class', i);
             }

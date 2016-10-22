@@ -3,12 +3,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
+ * @property Akun $Akun
  * @property Auto_trx $Auto_trx
  */
 class Pengeluaran_kas extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+        $this->load->model('Akun');
         $this->load->model('Auto_trx');
         date_default_timezone_set('Asia/Jakarta');
     }
@@ -25,9 +27,12 @@ class Pengeluaran_kas extends CI_Controller {
         if ($aksi && $id_trx_auto) {
             if ($aksi === 'getakun') {
                 $up = $this->Auto_trx->getKode_akun_up_by_id_trx_auto($id_trx_auto, "D");
+                $akun = $this->Akun->getAkun_group_up();
                 foreach ($up as $val) {
                     echo "<optgroup label='" . ($val->nama == '' ? '-' : $val->nama) . "'>";
-                    echo "<option value=''>California</option>";
+                    for ($i = 0; $i < count($akun[$val->kode]['kode']); $i++) {
+                        echo "<option value='" . $akun[$val->kode]['kode'][$i] . "'>" . $akun[$val->kode]['nama'][$i] . "</option>";
+                    }
                 }
             }
         } else {

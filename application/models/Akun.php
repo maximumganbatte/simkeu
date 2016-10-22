@@ -34,8 +34,9 @@ class Akun extends CI_Model {
         $query = $this->db->get();
         foreach ($query->result() as $val) {
             if($up_temp == $val->kode_up){
-                $data[$up_temp]['kode'][$i++] = $val->kode;
+                $data[$up_temp]['kode'][$i] = $val->kode;
                 $data[$up_temp]['nama'][$i] = $val->nama;
+                $i++;
             }else{
                 $i = 0;
                 $up_temp = $val->kode_up;

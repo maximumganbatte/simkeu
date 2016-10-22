@@ -211,9 +211,9 @@
                 if (status === 'success') {
                     var datas = data.split('xxxxxxxxxxxxx');
                     $(".nama-debet").text("");
-                    $(".nama-debet").append("<br/><br/> [DEBET]" + datas[0]);
-                    $(".nama-debet").text("");
-                    $(".nama-debet").append("<br/><br/> [KREDIT]" + datas[1]);
+                    $(".nama-debet").append("<br/><br/> [DEBET] " + datas[0]);
+                    $(".nama-kredit").text("");
+                    $(".nama-kredit").append("<br/><br/> [KREDIT] " + datas[1]);
                     $("#input-debet .select2_group").text("");
                     $("#input-debet .select2_group").append(datas[2]);
                     $("#input-kredit .select2_group").text("");

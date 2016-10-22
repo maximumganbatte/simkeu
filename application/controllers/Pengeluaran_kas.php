@@ -27,6 +27,7 @@ class Pengeluaran_kas extends CI_Controller {
                 $up = $this->Auto_trx->getKode_akun_up_by_id_trx_auto($id_trx_auto, "D");
                 foreach ($up as $val) {
                     echo "<optgroup label='" . ($val->nama == '' ? '-' : $val->nama) . "'>";
+                    echo "<option value=''>California</option>";
                 }
             }
         } else {

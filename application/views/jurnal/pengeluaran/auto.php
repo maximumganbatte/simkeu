@@ -181,9 +181,7 @@
             placeholder: "Pilih transaksi"
         });
 
-        $(".select2_group").select2({
-            placeholder: "Pilih Akun"
-        });
+        $(".select2_group").select2();
 
         $("table .select2-container").attr('style', 'width:100%;');
 

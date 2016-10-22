@@ -85,8 +85,8 @@
                                 <!--<button type="submit" class="btn btn-round btn-danger btn-sm"><i class="fa fa-close"></i></button>-->
                             </td>
                         </tr>
-                        <!------------------------------------------------------------>
                     </tbody>
+                    <!------------------------------------------------------------>
                     <tbody>
                         <tr>
                             <th colspan="5"><br/><br/>[KREDIT] nama</th>

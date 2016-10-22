@@ -19,6 +19,7 @@ class Auto_trx extends CI_Model {
     public function getTrx_auto() {
         $this->db->select("id, nama");
         $this->db->from('simkeu.trx_auto');
+        $this->db->order_by('nama');
         $query = $this->db->get();
         return $query->result();
     }

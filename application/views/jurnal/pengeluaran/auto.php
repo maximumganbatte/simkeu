@@ -34,10 +34,9 @@
                         <div class="col-md-3 col-sm-8 col-xs-12">
                             <select class="select2_single form-control" tabindex="-1">
                                 <option></option>
-                                <option value="AK">Alaska</option>
-                                <option value="HI">Hawaii</option>
-                                <option value="CA">California</option>
-                                <option value="NV">Nevada</option>
+                                <?php foreach ($trx_auto as $val) { ?>
+                                    <option value="<?= $val->id ?>"><?= $val->nama ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>

@@ -3,13 +3,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * @property Akun $Akun
  * @property Auto_trx $Auto_trx
  */
 class Pengeluaran_kas extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+        $this->load->model('Auto_trx');
         date_default_timezone_set('Asia/Jakarta');
     }
 
@@ -19,6 +19,7 @@ class Pengeluaran_kas extends CI_Controller {
     }
 
     public function auto() {
+        $data['trx_auto'] = $this->Auto_trx->getTrx_auto();
         $data['view'] = 'jurnal/pengeluaran/auto';
         $this->load->view('layout', $data);
     }

@@ -1,4 +1,6 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -20,6 +22,26 @@ class Akun extends CI_Model {
         $this->db->order_by('kode ASC');
         $query = $this->db->get();
         return $query->result();
+    }
+
+    public function getAkun_group_up() {
+        $i = 0;
+        $up_temp = "";
+        $data = array();
+        $this->db->select("kode, nama, kode_up");
+        $this->db->from('simkeu.akun');
+        $this->db->order_by('kode ASC');
+        $query = $this->db->get();
+        foreach ($query->result() as $val) {
+            if($up_temp == $val->kode_up){
+                $data[$up_temp]['kode'][$i++] = $val->kode;
+                $data[$up_temp]['nama'][$i] = $val->nama;
+            }else{
+                $i = 0;
+                $up_temp = $val->kode_up;
+            }
+        }
+        return $data;
     }
 
     public function getAkun_by_up($kode_up) {

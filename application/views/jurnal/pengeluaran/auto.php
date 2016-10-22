@@ -26,13 +26,13 @@
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-3 col-xs-12">Tanggal</label>
                         <div class="col-md-3 col-sm-8 col-xs-12">
-                            <input type="text" class="form-control"/>
+                            <input type="text" class="form-control tanggal-pengeluaran-kas"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-3 col-xs-12">Transaksi</label>
                         <div class="col-md-3 col-sm-8 col-xs-12">
-                            <select class="select2_single form-control">
+                            <select class="select2_single form-control transaksi-pengeluaran-kas">
                                 <option></option>
                                 <?php foreach ($trx_auto as $val) { ?>
                                     <option value="<?= $val->id ?>"><?= $val->nama ?></option>
@@ -219,6 +219,10 @@
             } else {
                 $(this).val(money_format(mo));
             }
+        });
+        
+        $('.transaksi-pengeluaran-kas').change(function () {
+            alert($('.transaksi-pengeluaran-kas').val());
         });
     });
 </script>

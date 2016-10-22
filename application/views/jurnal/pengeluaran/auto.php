@@ -154,7 +154,7 @@
         $("table .select2-container").attr('style', 'width:100%;');
 
         $(".add-input").click(function () {
-            var id_input = $(this).parent().parent().attr('id');
+            var id_input = $(this).parent().parent().parent().attr('id');
             alert(id_input);
         });
     });

@@ -138,8 +138,8 @@
                                 
                             </td>
                             <td>
-                                <button type="submit" class="btn btn-round btn-warning btn-sm edit-pengeluaran-kas"><i class="fa fa-pencil"></i></button><br/>
-                                <button type="submit" class="btn btn-round btn-danger btn-sm delete-pengeluaran-kas"><i class="fa fa-close"></i></button>
+                                <button type="submit" class="btn btn-round btn-success btn-sm"><i class="fa fa-plus"></i></button> 
+                                <button type="submit" class="btn btn-round btn-danger btn-sm"><i class="fa fa-close"></i></button>
                             </td>
                         </tr>
                     </tbody>

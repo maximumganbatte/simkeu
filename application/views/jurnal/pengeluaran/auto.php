@@ -181,7 +181,9 @@
             placeholder: "Pilih transaksi"
         });
 
-        $(".select2_group").select2();
+        $(".select2_group").select2({
+            placeholder: "Pilih Akun"
+        });
 
         $("table .select2-container").attr('style', 'width:100%;');
 
@@ -229,6 +231,7 @@
                     },
             function (data, status) {
                 if (status === 'success') {
+                    $("#input-debet .select2_group").text("");
                     $("#input-debet .select2_group").append(data);
                 }
             });

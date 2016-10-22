@@ -55,7 +55,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th colspan="5"><br/>[DEBET] nama</th>
+                            <th colspan="5" class="nama-debet"><br/>[DEBET] nama</th>
                         </tr>
                     </tbody>
                     <tbody id="input-debet">
@@ -81,7 +81,7 @@
                     <!------------------------------------------------------------>
                     <tbody>
                         <tr>
-                            <th colspan="5"><br/><br/>[KREDIT] nama</th>
+                            <th colspan="5" class="nama-kredit"><br/><br/>[KREDIT] nama</th>
                         </tr>
                     </tbody>
                     <tbody id="input-kredit">
@@ -210,10 +210,14 @@
             function (data, status) {
                 if (status === 'success') {
                     var datas = data.split('xxxxxxxxxxxxx');
+                    $("#nama-debet").text("");
+                    $("#nama-debet").append("<br/><br/> [DEBET]" + datas[0]);
+                    $("#nama-debet").text("");
+                    $("#nama-debet").append("<br/><br/> [KREDIT]" + datas[1]);
                     $("#input-debet .select2_group").text("");
-                    $("#input-debet .select2_group").append(datas[0]);
+                    $("#input-debet .select2_group").append(datas[2]);
                     $("#input-kredit .select2_group").text("");
-                    $("#input-kredit .select2_group").append(datas[1]);
+                    $("#input-kredit .select2_group").append(datas[3]);
                 }
             });
         });

@@ -36,6 +36,14 @@ class Auto_trx extends CI_Model {
         }
         return $data;
     }
+    
+    public function getTrx_auto_jenis_by_id_trx_auto($id_trx_auto) {
+        $this->db->select("id, nama");
+        $this->db->from('simkeu.trx_auto_jenis');
+        $this->db->where('id_trx_auto', $id_trx_auto);
+        $query = $this->db->get();
+        return $query->result();
+    }
 
     public function getAkun_trx_auto_jenis($id_trx_auto_jenis) {
         $kode_akun = "";

@@ -26,10 +26,15 @@ class Pengeluaran_kas extends CI_Controller {
 
         if ($aksi && $id_trx_auto) {
             if ($aksi === 'getakun') {
+                $trx_auto_jenis = $this->Auto_trx->getTrx_auto_jenis_by_id_trx_auto($id_trx_auto);
+                foreach ($trx_auto_jenis as $val) {
+                    echo $val->nama . 'xxxxxxxxxxxxx';
+                }
+
                 $up = $this->Auto_trx->getKode_akun_up_by_id_trx_auto($id_trx_auto, "D");
                 $akun = $this->Akun->getAkun_group_up($id_trx_auto, "D");
                 foreach ($up as $val) {
-                    echo "<optgroup label='" . $val->nama  . "'>";
+                    echo "<optgroup label='" . $val->nama . "'>";
                     for ($i = 0; $i < count($akun[$val->kode]['kode']); $i++) {
                         echo "<option value='" . $akun[$val->kode]['kode'][$i] . "'>" . $akun[$val->kode]['nama'][$i] . "</option>";
                     }
@@ -38,12 +43,11 @@ class Pengeluaran_kas extends CI_Controller {
                 $up = $this->Auto_trx->getKode_akun_up_by_id_trx_auto($id_trx_auto, "K");
                 $akun = $this->Akun->getAkun_group_up($id_trx_auto, "K");
                 foreach ($up as $val) {
-                    echo "<optgroup label='" . $val->nama  . "'>";
+                    echo "<optgroup label='" . $val->nama . "'>";
                     for ($i = 0; $i < count($akun[$val->kode]['kode']); $i++) {
                         echo "<option value='" . $akun[$val->kode]['kode'][$i] . "'>" . $akun[$val->kode]['nama'][$i] . "</option>";
                     }
                 }
-                
             }
         } else {
             $data['trx_auto'] = $this->Auto_trx->getTrx_auto();

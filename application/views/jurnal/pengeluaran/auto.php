@@ -176,9 +176,7 @@
             $("#" + id_input + " ." + cls).remove();
             alert(cls + " - " + cls2);
             for (var i = cls; i < cls2; i++) {
-                alert(i + 1);
-                alert($("#" + id_input + " ." + (i + 1)).attr('class'));
-                $("#" + id_input + " ." + (i + 1)).attr('class', i);
+                $("#" + id_input + " ." + (parseInt(i) + 1)).attr('class', i);
             }
         });
     });

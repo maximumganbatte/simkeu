@@ -59,7 +59,7 @@ class Auto_trx extends CI_Model {
         $this->db->join('simkeu.trx_auto_jenis taj', 'taj.id_trx_auto = ta.id');
         $this->db->join('simkeu.akun_trx_auto_jenis ataj', 'ataj.id_trx_auto_jenis = taj.id');
         $this->db->join('simkeu.akun a', 'a.kode = ataj.kode_akun');
-        $this->db->join('simkeu.akun au', 'au.kode = a.kode_up', 'left');
+        $this->db->join('simkeu.akun au', 'au.kode = a.kode_up', 'left'); 
         $this->db->where('ta.id', $id_trx_auto);
         $this->db->where('taj.kode_jenis', $kode_jenis);
         $this->db->order_by('nama');

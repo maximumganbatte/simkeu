@@ -122,8 +122,9 @@
                                 <!--<button type="submit" class="btn btn-round btn-danger btn-sm"><i class="fa fa-close"></i></button>-->
                             </td>
                         </tr>
-
-                        <!---------------------------------------------------------------------->
+                    </tbody>
+                    <!---------------------------------------------------------------------->
+                    <tbody>
                         <tr>
                             <td colspan="5">
                                 <button type="submit" class="btn btn-success" id="simpan-akun-otomatis">Simpan</button>
@@ -164,8 +165,8 @@
             $(input_clone).find('.select2_group').removeAttr('aria-hidden');
             $("#" + id_input).append(input_clone);
             $("#" + id_input + " ." + cls + " .select2_group").select2();
-            $(this).parent().text("");
-            $(this).parent().append("<button type='submit' class='btn btn-round btn-danger btn-sm remove-input'><i class='fa fa-close'></i></button>")
+            $("#" + id_input + " .button-action").text("");
+            $("#" + id_input + " .button-action").append("<button type='submit' class='btn btn-round btn-danger btn-sm remove-input'><i class='fa fa-close'></i></button>");
         });
     });
 </script>

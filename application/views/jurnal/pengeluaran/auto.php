@@ -63,31 +63,31 @@
                         <tr class="1">
                             <td>
                                 <select class="select2_group form-control"/>
-                                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                                        <option value="AK">Alaska</option>
-                                        <option value="HI">Hawaii</option>
-                                    </optgroup>
-                                    <optgroup label="Pacific Time Zone">
-                                        <option value="CA">California</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="WA">Washington</option>
-                                    </optgroup>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control"/>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control"/>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control right-align"/>
-                            </td>
-                            <td class="button-action">
-                                <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button>
-                            </td>
-                        </tr>
+                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                        <option value="AK">Alaska</option>
+                        <option value="HI">Hawaii</option>
+                    </optgroup>
+                    <optgroup label="Pacific Time Zone">
+                        <option value="CA">California</option>
+                        <option value="NV">Nevada</option>
+                        <option value="OR">Oregon</option>
+                        <option value="WA">Washington</option>
+                    </optgroup>
+                    </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control"/>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control"/>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control right-align money"/>
+                    </td>
+                    <td class="button-action">
+                        <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button>
+                    </td>
+                    </tr>
                     </tbody>
                     <!------------------------------------------------------------>
                     <tbody>
@@ -99,31 +99,31 @@
                         <tr class="1">
                             <td>
                                 <select class="select2_group form-control"/>
-                                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                                        <option value="AK">Alaska</option>
-                                        <option value="HI">Hawaii</option>
-                                    </optgroup>
-                                    <optgroup label="Pacific Time Zone">
-                                        <option value="CA">California</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="WA">Washington</option>
-                                    </optgroup>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control"/>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control"/>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control right-align"/>
-                            </td>
-                            <td class="button-action">
-                                <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button>
-                            </td>
-                        </tr>
+                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                        <option value="AK">Alaska</option>
+                        <option value="HI">Hawaii</option>
+                    </optgroup>
+                    <optgroup label="Pacific Time Zone">
+                        <option value="CA">California</option>
+                        <option value="NV">Nevada</option>
+                        <option value="OR">Oregon</option>
+                        <option value="WA">Washington</option>
+                    </optgroup>
+                    </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control"/>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control"/>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control right-align money"/>
+                    </td>
+                    <td class="button-action">
+                        <button type="submit" class="btn btn-round btn-success btn-sm add-input"><i class="fa fa-plus"></i></button>
+                    </td>
+                    </tr>
                     </tbody>
                     <!---------------------------------------------------------------------->
                     <tbody>
@@ -141,6 +141,37 @@
 
 <script>
     $(function () {
+        function money_format(num) {
+            var min = false;
+            num = String(num);
+            if (num.substring(0, 1) === "-") {
+                num = num.replace("-", "");
+                min = true;
+            }
+
+            var mon = "";
+            var num_lenght = String(num).length;
+            for (var i = 1; i <= num_lenght; i++) {
+                mon += String(num.substring(num_lenght - (i - 1), num_lenght - i));
+                if ((i) % 3 === 0)
+                    mon += ".";
+            }
+
+            num = "";
+            var mon_lenght = String(mon).length;
+            for (i = 1; i <= mon_lenght; i++) {
+                if (i !== 1 || (i === 1 && mon.substring(mon_lenght - (i - 1), mon_lenght - i) !== "."))
+                    num += String(mon.substring(mon_lenght - (i - 1), mon_lenght - i));
+            }
+
+
+            if (min)
+                num = "-" + num;
+            return num;
+        }
+
+        //-----------------------------------------------------
+
         var ld = 1, lk = 1;
 
         $('.ju').attr('class', 'ju active');
@@ -179,6 +210,15 @@
             $("#" + id_input + " ." + cls).remove();
             for (var i = cls; i < cls2; i++) {
                 $("#" + id_input + " ." + (parseInt(i) + 1)).attr('class', i);
+            }
+        });
+
+        $(document).on('input', '.money', function () {
+            var mo = $(this).val().replace(/[.]/gi, '').replace(/[^\d.]/g, '');
+            if (parseInt(mo) === 0) {
+                $(this).val('0');
+            } else {
+                $(this).val(money_format(mo));
             }
         });
     });

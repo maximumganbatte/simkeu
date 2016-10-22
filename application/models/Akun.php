@@ -28,7 +28,7 @@ class Akun extends CI_Model {
         $i = 0;
         $up_temp = "-";
         $data = array();
-        $this->db->select("kode, nama, CASE WHEN kode_up IS NULL THEN '-' ELSE kode_up END as kode_up");
+        $this->db->select("a.kode, a.nama, CASE WHEN a.kode_up IS NULL THEN '-' ELSE a.kode_up END as kode_up");
         $this->db->from('simkeu.akun a');
         $this->db->join('simkeu.akun_trx_auto_jenis ataj', 'ataj.kode_akun = a.kode');
         $this->db->join('simkeu.trx_auto_jenis taj', 'taj.id = a.id_trx_auto_jenis');

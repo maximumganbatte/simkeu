@@ -21,13 +21,13 @@
                 <form class="form-horizontal form-label-left">
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-3 col-xs-12">Tanggal</label>
-                        <div class="col-md-6 col-sm-9 col-xs-12">
+                        <div class="col-md-5 col-sm-9 col-xs-12">
                             <input type="text" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-3 col-xs-12">Transaksi</label>
-                        <div class="col-md-6 col-sm-9 col-xs-12">
+                        <div class="col-md-5 col-sm-9 col-xs-12">
                             <select class="select2_single form-control" tabindex="-1">
                                 <option></option>
                                 <option value="AK">Alaska</option>

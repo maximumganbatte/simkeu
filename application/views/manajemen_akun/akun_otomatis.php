@@ -70,8 +70,8 @@
                     <thead>
                         <tr>
                             <th>Nama</th>
-                            <th>Debet</th>
-                            <th>Kredit</th>
+                            <th style="width: 30%">Debet</th>
+                            <th style="width: 30%">Kredit</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>

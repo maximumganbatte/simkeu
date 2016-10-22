@@ -85,7 +85,7 @@
                         </tr>
                         <!------------------------------------------------------------>
                         <tr>
-                            <th colspan="5">[KREDIT] nama</th>
+                            <th colspan="5"><br/><br/>[KREDIT] nama</th>
                         </tr>
                         <tr>
                             <td>

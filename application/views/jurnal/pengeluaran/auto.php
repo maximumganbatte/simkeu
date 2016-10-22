@@ -155,7 +155,34 @@
 
         $(".add-input").click(function () {
             var id_input = $(this).parent().parent().parent().attr('id');
-            $("#" + id_input).append($(this).parent().parent().clone());
+            $("#" + id_input).append("<tr class='1'>" +
+                    "<td>" +
+                    "<select class='select2_group form-control'>" +
+                    "<optgroup label='Alaskan/Hawaiian Time Zone'>" +
+                    "<option value='AK'>Alaska</option>" +
+                    "<option value='HI'>Hawaii</option>" +
+                    "</optgroup>" +
+                    "<optgroup label='Pacific Time Zone'>" +
+                    "<option value='CA'>California</option>" +
+                    "<option value='NV'>Nevada</option>" +
+                    "<option value='OR'>Oregon</option>" +
+                    "<option value='WA'>Washington</option>" +
+                    "</optgroup>" +
+                    "</select>" +
+                    "</td>" +
+                    "<td>" +
+                    "<input type='text' class='form-control'>" +
+                    "</td>" +
+                    "<td>" +
+                    "<input type='text' class='form-control'>" +
+                    "</td>" +
+                    "<td>" +
+                    "<input type='text' class='form-control'>" +
+                    "</td>" +
+                    "<td>" +
+                    "<button type='submit' class='btn btn-round btn-success btn-sm add-input'><i class='fa fa-plus'></i></button> " +
+                    "</td>" +
+                    "</tr>");
         });
     });
 </script>

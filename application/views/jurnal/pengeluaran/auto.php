@@ -155,7 +155,7 @@
 
         $(".add-input").click(function () {
             var id_input = $(this).parent().parent().parent().attr('id');
-            alert($(this).parent().parent().clone());
+            $("#" + id_input).append($(this).parent().parent().clone());
         });
     });
 </script>

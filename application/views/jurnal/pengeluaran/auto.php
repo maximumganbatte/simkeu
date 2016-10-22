@@ -27,49 +27,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Disabled Input </label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input type="text" class="form-control" disabled="disabled" placeholder="Disabled Input">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Read-Only Input</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input type="text" class="form-control" readonly="readonly" placeholder="Read-Only Input">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
-                        </label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <textarea class="form-control" rows="3" placeholder='rows="3"'></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Password</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input type="password" class="form-control" value="passwordonetwo">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">AutoComplete</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input type="text" name="country" id="autocomplete-custom-append" class="form-control col-md-10"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Select</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <select class="form-control">
-                                <option>Choose option</option>
-                                <option>Option one</option>
-                                <option>Option two</option>
-                                <option>Option three</option>
-                                <option>Option four</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Select Custom</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
                             <select class="select2_single form-control" tabindex="-1">

@@ -33,6 +33,7 @@
                         <label class="control-label col-md-2 col-sm-3 col-xs-12">Transaksi</label>
                         <div class="col-md-3 col-sm-8 col-xs-12">
                             <select class="select2_single form-control" tabindex="-1">
+                                <option></option>
                                 <?php foreach ($trx_auto as $val) { ?>
                                     <option value="<?= $val->id ?>"><?= $val->nama ?></option>
                                 <?php } ?>
@@ -176,8 +177,13 @@
         $('.ju .pk').attr('class', 'pk current-page');
         $('.ju .child_menu').attr('style', 'display:block;');
 
-        $(".select2_single").select2();
+        $(".select2_single").select2({
+            placeholder: "Pilih transaksi",
+            allowClear: true
+        });
+
         $(".select2_group").select2();
+
         $("table .select2-container").attr('style', 'width:100%;');
 
         $(document).on('click', '.add-input', function () {

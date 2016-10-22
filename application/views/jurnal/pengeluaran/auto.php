@@ -165,8 +165,8 @@
             $(input_clone).find('.select2_group').removeAttr('aria-hidden');
             $("#" + id_input).append(input_clone);
             $("#" + id_input + " ." + cls + " .select2_group").select2();
-            $("#" + id_input + " .button-action").text("");
-            $("#" + id_input + " .button-action").append("<button type='submit' class='btn btn-round btn-danger btn-sm remove-input'><i class='fa fa-close'></i></button>");
+            $("#" + id_input + " ." + cls + " .button-action").text("");
+            $("#" + id_input + " ." + cls + " .button-action").append("<button type='submit' class='btn btn-round btn-danger btn-sm remove-input'><i class='fa fa-close'></i></button>");
         });
     });
 </script>

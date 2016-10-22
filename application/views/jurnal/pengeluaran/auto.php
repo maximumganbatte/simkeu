@@ -209,8 +209,11 @@
                     },
             function (data, status) {
                 if (status === 'success') {
+                    var datas = data.split('xxxxxxxxxxxxx');
                     $("#input-debet .select2_group").text("");
-                    $("#input-debet .select2_group").append(data);
+                    $("#input-debet .select2_group").append(datas[0]);
+                    $("#input-kredit .select2_group").text("");
+                    $("#input-kredit .select2_group").append(datas[1]);
                 }
             });
         });

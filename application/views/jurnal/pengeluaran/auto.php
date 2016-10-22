@@ -155,7 +155,9 @@
 
         $(".add-input").click(function () {
             var id_input = $(this).parent().parent().parent().attr('id');
+            var cls = (id_input === 'input-debet') ? ++ld : ++lk;
             var input_clone = $(this).parent().parent().clone();
+            $(input_clone).attr('class', cls);
             $(input_clone).find('.select2').remove();
             $(input_clone).find('.select2_group').attr('class', 'select2_group form-control');
             $(input_clone).find('.select2_group').removeAttr('tabindex');

@@ -154,7 +154,7 @@
         $("table .select2-container").attr('style', 'width:100%;');
 
         $(".add-input").click(function () {
-            var id_input = $(this).parent().parent().parent().attr('id');\
+            var id_input = $(this).parent().parent().parent().attr('id');
             var input_clone = $(this).parent().parent().clone();
             $(input_clone).find('.select2').remove();
             $("#" + id_input).append(input_clone);

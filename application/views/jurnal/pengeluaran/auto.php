@@ -38,7 +38,8 @@
                         </div>
                     </div>
                 </fieldset>
-
+                
+                <br/>
                 <table class="table">
                     <thead>
                         <tr>
@@ -55,7 +56,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                
                                     <select class="select2_group form-control">
                                         <optgroup label="Alaskan/Hawaiian Time Zone">
                                             <option value="AK">Alaska</option>
@@ -118,23 +119,23 @@
                                             <option value="WV">West Virginia</option>
                                         </optgroup>
                                     </select>
-                                </div>
+                                
                             </td>
                             <td>
-                                <div class="col-md-3 col-sm-8 col-xs-12">
+                                
                                     <input type="text" class="form-control">
-                                </div>
+                                
                             </td>
                             <td>
-                                <div class="col-md-3 col-sm-8 col-xs-12">
+                                
                                     <input type="text" class="form-control">
-                                </div>
+                                
                             </td>
                             <td>
 
-                                <div class="col-md-3 col-sm-8 col-xs-12">
+                                
                                     <input type="text" class="form-control">
-                                </div>
+                                
                             </td>
                             <td>
                                 <button type="submit" class="btn btn-round btn-warning btn-sm edit-pengeluaran-kas"><i class="fa fa-pencil"></i></button><br/>

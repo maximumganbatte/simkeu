@@ -22,7 +22,7 @@ class Pengeluaran_kas extends CI_Controller {
         $aksi = $this->input->post('aksi', TRUE);
         $id_trx_auto = $this->input->post('id_trx_auto', TRUE);
 
-        if ($aksi && id_trx_auto) {
+        if ($aksi && $id_trx_auto) {
             if($aksi === 'getakun'){
                 $up = $this->Auto_trx->getKode_akun_up_by_id_trx_auto($id_trx_auto, "D");
                 foreach ($up as $val) {

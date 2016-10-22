@@ -169,7 +169,7 @@
             $("#" + id_input + " ." + (cls - 1) + " .button-action").append("<button type='submit' class='btn btn-round btn-danger btn-sm remove-input'><i class='fa fa-close'></i></button>");
         });
 
-        $(document).on('click', '.add-input', function () {
+        $(document).on('click', '.remove-input', function () {
             var id_input = $(this).parent().parent().parent().attr('id');
             var cls = $(this).parent().parent().attr('class');
             var cls2 = (id_input === 'input-debet') ? ld-- : lk--;

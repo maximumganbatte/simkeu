@@ -138,7 +138,7 @@
 
 <script>
     $(function () {
-        var d['input-debet'] = 1, d['input-kredit'] = 1;
+        var ld = 1, lk = 1;
 
         $('.ju').attr('class', 'ju active');
         $('.ju .pk').attr('class', 'pk current-page');

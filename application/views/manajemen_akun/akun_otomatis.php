@@ -69,9 +69,9 @@
                 <table id="table-akun" class ="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Nama</th>
-                            <th style="width: 30%">Debet</th>
-                            <th style="width: 30%">Kredit</th>
+                            <th style="width: 20%">Nama</th>
+                            <th style="width: 35%">Debet</th>
+                            <th style="width: 35%">Kredit</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -81,7 +81,7 @@
                                 <td class="nama"><?= $val->nama ?></td>
                                 <td id="<?= $trx_auto_jenis[$val->id]['D']['id_trx_auto_jenis'] ?>" class="td-id"><span class="nama-debet"><?= $trx_auto_jenis[$val->id]['D']['nama'] ?></span><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Debet..'" value="<?= $trx_auto_jenis[$val->id]['D']['kode_akun'] ?>" editable="true" style="width:100%"></td>
                                 <td id="<?= $trx_auto_jenis[$val->id]['K']['id_trx_auto_jenis'] ?>" class="td-id" ><span class="nama-kredit"><?= $trx_auto_jenis[$val->id]['K']['nama'] ?></span><br/><input class="easyui-combotree kode-akun-list" data-options="url:'dataakun_mct',method:'get',lines:true,multiple:true,cascadeCheck:false,prompt:'Pilih Akun Kredit..'" value="<?= $trx_auto_jenis[$val->id]['K']['kode_akun'] ?>" editable="true" style="width:100%"></td>
-                                <td>
+                                <td style="text-align:center;">
                                     <button type="submit" class="btn btn-round btn-warning edit-trx-auto"><i class="fa fa-pencil"></i></button> 
                                     <button type="submit" class="btn btn-round btn-danger delete-trx-auto"><i class="fa fa-close"></i></button>
                                 </td>

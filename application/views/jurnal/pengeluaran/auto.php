@@ -60,57 +60,59 @@
                             </select>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">Checkboxes and radios
-                            <br>
-                            <small class="text-navy">Normal Bootstrap elements</small>
-                        </label>
-
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat" checked="checked"> Checked
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat"> Unchecked
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat" disabled="disabled"> Disabled
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat" disabled="disabled" checked="checked"> Disabled & checked
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" checked name="iCheck"> Checked
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" name="iCheck"> Unchecked
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" name="iCheck" disabled="disabled"> Disabled
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" name="iCheck3" disabled="disabled" checked> Disabled & Checked
-                                </label>
-                            </div>
-                        </div>
-                    </div>
                     
+                    <br/><br/><br/><br/>
+                    
+<!--
+                    <div class="form-group">
+                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">Checkboxes and radios
+                            <br>
+                            <small class="text-navy">Normal Bootstrap elements</small>
+                        </label>
+
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="flat" checked="checked"> Checked
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="flat"> Unchecked
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="flat" disabled="disabled"> Disabled
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="flat" disabled="disabled" checked="checked"> Disabled & checked
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" class="flat" checked name="iCheck"> Checked
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" class="flat" name="iCheck"> Unchecked
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" class="flat" name="iCheck" disabled="disabled"> Disabled
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" class="flat" name="iCheck3" disabled="disabled" checked> Disabled & Checked
+                                </label>
+                            </div>
+                        </div>
+                    </div>                
                     <div class="form-group">
                         <label class="col-md-3 col-sm-3 col-xs-12 control-label">Checkboxes and radios
                             <br>
@@ -160,7 +162,7 @@
                             </div>
                         </div>
                     </div>
-                  
+                  -->
                 </form>
             </div>
         </div>

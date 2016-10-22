@@ -18,7 +18,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
-                <form class="form-horizontal form-label-left">
+                <fieldset class="form-horizontal form-label-left">
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-3 col-xs-12">Tanggal</label>
                         <div class="col-md-3 col-sm-8 col-xs-12">
@@ -37,36 +37,20 @@
                             </select>
                         </div>
                     </div>
-                </form>
+                </fieldset>
 
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
+                            <th>Kode Akun</th>
+                            <th>Keterangan</th>
+                            <th>Nomor Bukti</th>
+                            <th>Jumlah</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>

@@ -20,11 +20,11 @@
             <div class="x_content">
                 <fieldset class="form-horizontal form-label-left">
                     <div class="form-group">
-                        <label class="control-label col-md-1 col-sm-3 col-xs-12">Tanggal</label>
+                        <label class="control-label col-md-1 col-sm-3 col-xs-12">Default Input</label>
                         <div class="col-md-4 col-sm-8 col-xs-12">
-                            <input type="text" id="nama-transaksi" class="form-control col-md-7 col-xs-12 input-text16" maxlength="16" />
+                          <input type="text" class="form-control" placeholder="Default Input">
                         </div>
-                    </div>
+                      </div>
                     <div class="form-group">
                         <label class="control-label col-md-1 col-sm-3 col-xs-12">Transaksi</label>
                         <div class="col-md-4 col-sm-8 col-xs-12">

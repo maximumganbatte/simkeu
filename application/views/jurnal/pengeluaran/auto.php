@@ -50,10 +50,12 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody id="input-debet">
+                    <tbody>
                         <tr>
                             <th colspan="5"><br/>[DEBET] nama</th>
                         </tr>
+                    </tbody>
+                    <tbody id="input-debet">
                         <tr class="1">
                             <td>
                                 <select class="select2_group form-control">
@@ -85,10 +87,12 @@
                         </tr>
                         <!------------------------------------------------------------>
                     </tbody>
-                    <tbody id="input-kredit">
+                    <tbody>
                         <tr>
                             <th colspan="5"><br/><br/>[KREDIT] nama</th>
                         </tr>
+                    </tbody>
+                    <tbody id="input-kredit">
                         <tr class="1">
                             <td>
                                 <select class="select2_group form-control">
@@ -134,6 +138,8 @@
 
 <script>
     $(function () {
+        var d['input-debet'] = 1, d['input-kredit'] = 1;
+
         $('.ju').attr('class', 'ju active');
         $('.ju .pk').attr('class', 'pk current-page');
         $('.ju .child_menu').attr('style', 'display:block;');
@@ -148,7 +154,8 @@
         $("table .select2-container").attr('style', 'width:100%;');
 
         $(".add-input").click(function () {
-            alert('1');
+            var id_input = $(this).parent().parent().attr('id');
+            alert(id_input);
         });
     });
 </script>

@@ -19,14 +19,26 @@ class Pengeluaran_kas extends CI_Controller {
     }
 
     public function auto() {
-        $data['trx_auto'] = $this->Auto_trx->getTrx_auto();
-        $data['view'] = 'jurnal/pengeluaran/auto';
-        $this->load->view('layout', $data);
+        $aksi = $this->input->post('aksi', TRUE);
+        $id_trx_auto = $this->input->post('id_trx_auto', TRUE);
+
+        if ($aksi && id_trx_auto) {
+            if($aksi === 'getakun'){
+                $up = $this->Auto_trx->getKode_akun_up_by_id_trx_auto($id_trx_auto, "D");
+                foreach ($up as $val) {
+                    echo "<optgroup label='$val->nama'>";
+                }
+            }
+        } else {
+            $data['trx_auto'] = $this->Auto_trx->getTrx_auto();
+            $data['view'] = 'jurnal/pengeluaran/auto';
+            $this->load->view('layout', $data);
+        }
     }
-    
+
     public function manual() {
         $data['view'] = 'jurnal/pengeluaran/manual';
         $this->load->view('layout', $data);
     }
-    
+
 }

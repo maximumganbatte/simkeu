@@ -62,16 +62,16 @@
                         <tr class="1">
                             <td>
                                 <select class="select2_group form-control">
-<!--                                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                                        <option value="AK">Alaska</option>
-                                        <option value="HI">Hawaii</option>
-                                    </optgroup>
-                                    <optgroup label="Pacific Time Zone">
-                                        <option value="CA">California</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="WA">Washington</option>
-                                    </optgroup>-->
+                                    <!--                                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                                            <option value="AK">Alaska</option>
+                                                                            <option value="HI">Hawaii</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="Pacific Time Zone">
+                                                                            <option value="CA">California</option>
+                                                                            <option value="NV">Nevada</option>
+                                                                            <option value="OR">Oregon</option>
+                                                                            <option value="WA">Washington</option>
+                                                                        </optgroup>-->
                                 </select>
                             </td>
                             <td>
@@ -98,16 +98,16 @@
                         <tr class="1">
                             <td>
                                 <select class="select2_group form-control">
-<!--                                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                                        <option value="AK">Alaska</option>
-                                        <option value="HI">Hawaii</option>
-                                    </optgroup>
-                                    <optgroup label="Pacific Time Zone">
-                                        <option value="CA">California</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="WA">Washington</option>
-                                    </optgroup>-->
+                                    <!--                                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                                            <option value="AK">Alaska</option>
+                                                                            <option value="HI">Hawaii</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="Pacific Time Zone">
+                                                                            <option value="CA">California</option>
+                                                                            <option value="NV">Nevada</option>
+                                                                            <option value="OR">Oregon</option>
+                                                                            <option value="WA">Washington</option>
+                                                                        </optgroup>-->
                                 </select>
                             </td>
                             <td>
@@ -178,8 +178,7 @@
         $('.ju .child_menu').attr('style', 'display:block;');
 
         $(".select2_single").select2({
-            placeholder: "Pilih transaksi",
-            allowClear: true
+            placeholder: "Pilih transaksi"
         });
 
         $(".select2_group").select2();
@@ -220,9 +219,19 @@
                 $(this).val(money_format(mo));
             }
         });
-        
+
         $('.transaksi-pengeluaran-kas').change(function () {
-            alert($('.transaksi-pengeluaran-kas').val());
+            var id_trx_auto = $('.transaksi-pengeluaran-kas').val()
+            $.post('auto',
+                    {
+                        id_trx_auto: id_trx_auto,
+                        aksi: 'getakun'
+                    },
+            function (data, status) {
+                if (status === 'success') {
+                    $("#input-debet .select2_group").append(data);
+                }
+            });
         });
     });
 </script>

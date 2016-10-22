@@ -56,7 +56,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <select class="select2_group form-control" style="width: 100%;">
+                                <select class="select2_group form-control">
                                     <optgroup label="Alaskan/Hawaiian Time Zone">
                                         <option value="AK">Alaska</option>
                                         <option value="HI">Hawaii</option>
@@ -142,5 +142,7 @@
         });
 
         $(".select2_group").select2();
+        
+        $("table .select2-container").attr('style', 'width:100%;');
     });
 </script>

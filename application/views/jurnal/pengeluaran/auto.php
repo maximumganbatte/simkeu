@@ -89,7 +89,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <select class="select2_group form-control">
+                                <select class="select2_group form-control" style="width: 100%;">
                                     <optgroup label="Alaskan/Hawaiian Time Zone">
                                         <option value="AK">Alaska</option>
                                         <option value="HI">Hawaii</option>

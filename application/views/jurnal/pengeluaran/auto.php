@@ -34,136 +34,41 @@
                                 <option value="HI">Hawaii</option>
                                 <option value="CA">California</option>
                                 <option value="NV">Nevada</option>
-                                <option value="OR">Oregon</option>
-                                <option value="WA">Washington</option>
-                                <option value="AZ">Arizona</option>
-                                <option value="CO">Colorado</option>
-                                <option value="ID">Idaho</option>
-                                <option value="MT">Montana</option>
-                                <option value="NE">Nebraska</option>
-                                <option value="NM">New Mexico</option>
-                                <option value="ND">North Dakota</option>
-                                <option value="UT">Utah</option>
-                                <option value="WY">Wyoming</option>
-                                <option value="AR">Arkansas</option>
-                                <option value="IL">Illinois</option>
-                                <option value="IA">Iowa</option>
-                                <option value="KS">Kansas</option>
-                                <option value="KY">Kentucky</option>
-                                <option value="LA">Louisiana</option>
-                                <option value="MN">Minnesota</option>
-                                <option value="MS">Mississippi</option>
-                                <option value="MO">Missouri</option>
-                                <option value="OK">Oklahoma</option>
-                                <option value="SD">South Dakota</option>
-                                <option value="TX">Texas</option>
                             </select>
                         </div>
                     </div>
-                    
-                    <br/><br/><br/><br/>
-                    
-<!--
-                    <div class="form-group">
-                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">Checkboxes and radios
-                            <br>
-                            <small class="text-navy">Normal Bootstrap elements</small>
-                        </label>
-
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat" checked="checked"> Checked
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat"> Unchecked
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat" disabled="disabled"> Disabled
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat" disabled="disabled" checked="checked"> Disabled & checked
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" checked name="iCheck"> Checked
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" name="iCheck"> Unchecked
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" name="iCheck" disabled="disabled"> Disabled
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" name="iCheck3" disabled="disabled" checked> Disabled & Checked
-                                </label>
-                            </div>
-                        </div>
-                    </div>                
-                    <div class="form-group">
-                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">Checkboxes and radios
-                            <br>
-                            <small class="text-navy">Normal Bootstrap elements</small>
-                        </label>
-
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat" checked="checked"> Checked
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat"> Unchecked
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat" disabled="disabled"> Disabled
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="flat" disabled="disabled" checked="checked"> Disabled & checked
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" checked name="iCheck"> Checked
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" name="iCheck"> Unchecked
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" name="iCheck" disabled="disabled"> Disabled
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="flat" name="iCheck3" disabled="disabled" checked> Disabled & Checked
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                  -->
                 </form>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

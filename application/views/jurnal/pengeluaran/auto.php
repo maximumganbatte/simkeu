@@ -52,11 +52,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th colspan="5"><br/><br/>[DEBET] nama</th>
+                            <th colspan="5"><br/>[DEBET] nama</th>
                         </tr>
                         <tr>
                             <td>
-                                <select class="select2_group form-control">
+                                <select class="select2_group form-control" style="width: 100%;">
                                     <optgroup label="Alaskan/Hawaiian Time Zone">
                                         <option value="AK">Alaska</option>
                                         <option value="HI">Hawaii</option>
@@ -116,7 +116,7 @@
                                 <!--<button type="submit" class="btn btn-round btn-danger btn-sm"><i class="fa fa-close"></i></button>-->
                             </td>
                         </tr>
-                        
+
                         <!---------------------------------------------------------------------->
                         <tr>
                             <td colspan="5">
@@ -140,7 +140,7 @@
             placeholder: "Select a state",
             allowClear: true
         });
-        
-         $(".select2_group").select2();
+
+        $(".select2_group").select2();
     });
 </script>

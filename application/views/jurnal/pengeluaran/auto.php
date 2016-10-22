@@ -52,7 +52,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th colspan="5">[DEBET] nama</th>
+                            <th colspan="5"><br/><br/>[DEBET] nama</th>
                         </tr>
                         <tr>
                             <td>
